@@ -1,0 +1,1209 @@
+{
+    "schema_version": "1.0",
+    "currency": "USD",
+    "featured_item_ids": [
+        "food-sandwiches-breakfast-sandwich",
+        "drinks-coffee-latte",
+        "food-bowls-mediterranean-bowl"
+    ],
+    "categories": [
+        {
+            "name": "Drinks",
+            "subcategories": [
+                "Coffee",
+                "Tea",
+                "Other",
+                "Smoothies",
+                "Booze"
+            ]
+        },
+        {
+            "name": "Food",
+            "subcategories": [
+                "Sandwiches",
+                "Toast",
+                "Chia Pudding",
+                "Wraps",
+                "Salads",
+                "Bowls",
+                "Sides",
+                "Kids Menu",
+                "Specials"
+            ]
+        },
+        {
+            "name": "Pastries",
+            "subcategories": [
+                "Croissant",
+                "Danish",
+                "Scone",
+                "Muffin",
+                "Gluten Free",
+                "Cookie",
+                "Cinnamon Roll",
+                "Cakes/Breads",
+                "Tarts"
+            ]
+        }
+    ],
+    "items": [
+        {
+            "id": "drinks-coffee-drip-coffee",
+            "name": "Drip Coffee",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 3.75,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-cafe-au-lait",
+            "name": "Cafe Au Lait",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-espresso",
+            "name": "Espresso",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 3.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-hot-americano",
+            "name": "Hot Americano",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 3.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-iced-americano",
+            "name": "Iced Americano",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 3.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-cortado",
+            "name": "Cortado",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-cappuccino",
+            "name": "Cappuccino",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-latte",
+            "name": "Latte",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 5.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-cold-brew",
+            "name": "Cold Brew",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 3.5,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-cold-brew-lemonade",
+            "name": "Cold Brew Lemonade",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 5.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-coconut-cloud",
+            "name": "Coconut Cloud",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 5.25,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-mushroom-cold-brew",
+            "name": "Mushroom Cold Brew",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 6.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-caramel-banana-affogato",
+            "name": "Caramel Banana Affogato",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 7.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-coffee-cinnamon-toast-crunch",
+            "name": "Cinnamon Toast Crunch",
+            "category": "Drinks",
+            "subcategory": "Coffee",
+            "price": 6.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-assam-black-tea",
+            "name": "Assam Black Tea",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-jasmine-green-tea",
+            "name": "Jasmine Green Tea",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-raspberry-elderflower-tea",
+            "name": "Raspberry Elderflower Tea",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-chai-latte",
+            "name": "Chai Latte",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-matcha-latte",
+            "name": "Matcha Latte",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 5.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-earl-grey",
+            "name": "Earl Grey",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-moroccan-mint-green-tea",
+            "name": "Moroccan Mint Green Tea",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-ginger-turmeric",
+            "name": "Ginger Turmeric",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-tea-lemonade",
+            "name": "Tea & Lemonade",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-tea-matcha-lemonade",
+            "name": "Matcha Lemonade",
+            "category": "Drinks",
+            "subcategory": "Tea",
+            "price": 5.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-lemonade",
+            "name": "Lemonade",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 3.0,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-orange-juice",
+            "name": "Orange Juice",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-hot-chocolate",
+            "name": "Hot Chocolate",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-milk",
+            "name": "Milk",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-coke",
+            "name": "Coke",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 2.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-diet-coke",
+            "name": "Diet Coke",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 2.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-sprite",
+            "name": "Sprite",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 2.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-tonic-water",
+            "name": "Tonic Water",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 2.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-bottled-water",
+            "name": "Bottled Water",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 2.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-coconut-water-16-9oz",
+            "name": "Coconut Water 16.9oz",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-san-pellegrino",
+            "name": "San Pellegrino",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-liquid-death",
+            "name": "Liquid Death",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 2.75,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-other-zevia",
+            "name": "Zevia",
+            "category": "Drinks",
+            "subcategory": "Other",
+            "price": 3.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-smoothies-mixed-berry-baby",
+            "name": "Mixed Berry Baby",
+            "category": "Drinks",
+            "subcategory": "Smoothies",
+            "price": 7.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-smoothies-chocolate-pbuddy-banana",
+            "name": "Chocolate PBuddy Banana",
+            "category": "Drinks",
+            "subcategory": "Smoothies",
+            "price": 8.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-smoothies-green-day",
+            "name": "Green Day",
+            "category": "Drinks",
+            "subcategory": "Smoothies",
+            "price": 8.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-smoothies-strawberry-banana",
+            "name": "Strawberry Banana",
+            "category": "Drinks",
+            "subcategory": "Smoothies",
+            "price": 7.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-booze-prosecco-split",
+            "name": "Prosecco Split",
+            "category": "Drinks",
+            "subcategory": "Booze",
+            "price": 8.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-booze-spumante-brut-bottle",
+            "name": "Spumante Brut Bottle",
+            "category": "Drinks",
+            "subcategory": "Booze",
+            "price": 18.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-booze-bloody-miller",
+            "name": "Bloody Miller",
+            "category": "Drinks",
+            "subcategory": "Booze",
+            "price": 7.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-booze-sauvingnon-blanc",
+            "name": "Sauvingnon Blanc",
+            "category": "Drinks",
+            "subcategory": "Booze",
+            "price": 9.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "drinks-booze-pino-grigio",
+            "name": "Pino Grigio",
+            "category": "Drinks",
+            "subcategory": "Booze",
+            "price": 7.0,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sandwiches-breakfast-sandwich",
+            "name": "Breakfast Sandwich",
+            "category": "Food",
+            "subcategory": "Sandwiches",
+            "price": 6.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sandwiches-blt",
+            "name": "BLT",
+            "category": "Food",
+            "subcategory": "Sandwiches",
+            "price": 13.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-toast-avocado-toast",
+            "name": "Avocado Toast",
+            "category": "Food",
+            "subcategory": "Toast",
+            "price": 12.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-toast-straight-up-avocado-toast",
+            "name": "Straight Up Avocado Toast",
+            "category": "Food",
+            "subcategory": "Toast",
+            "price": 7.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-toast-egg-kimchi-toast",
+            "name": "Egg & Kimchi Toast",
+            "category": "Food",
+            "subcategory": "Toast",
+            "price": 13.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-toast-bagel-lox",
+            "name": "Bagel & Lox",
+            "category": "Food",
+            "subcategory": "Toast",
+            "price": 7.0,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-toast-chili-crunch-egg",
+            "name": "Chili Crunch Egg",
+            "category": "Food",
+            "subcategory": "Toast",
+            "price": 8.0,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-chia-pudding-classic-chai",
+            "name": "Classic Chai",
+            "category": "Food",
+            "subcategory": "Chia Pudding",
+            "price": 7.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-chia-pudding-banana-chia",
+            "name": "Banana Chia",
+            "category": "Food",
+            "subcategory": "Chia Pudding",
+            "price": 7.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-wraps-vegan-sweet-potato-wrap",
+            "name": "Vegan Sweet Potato Wrap",
+            "category": "Food",
+            "subcategory": "Wraps",
+            "price": 8.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": [
+                "vegan"
+            ]
+        },
+        {
+            "id": "food-salads-solstice-salad",
+            "name": "Solstice Salad",
+            "category": "Food",
+            "subcategory": "Salads",
+            "price": 12.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-bowls-mediterranean-bowl",
+            "name": "Mediterranean Bowl",
+            "category": "Food",
+            "subcategory": "Bowls",
+            "price": 13.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-bowls-egg-veggie-scramble",
+            "name": "Egg & Veggie Scramble",
+            "category": "Food",
+            "subcategory": "Bowls",
+            "price": 10.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-bowls-kimchi-egg-scramble",
+            "name": "Kimchi Egg Scramble",
+            "category": "Food",
+            "subcategory": "Bowls",
+            "price": 10.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sides-egg",
+            "name": "Egg",
+            "category": "Food",
+            "subcategory": "Sides",
+            "price": 2.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sides-toast",
+            "name": "Toast",
+            "category": "Food",
+            "subcategory": "Sides",
+            "price": 3.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sides-side-sliced-avocado",
+            "name": "Side Sliced Avocado",
+            "category": "Food",
+            "subcategory": "Sides",
+            "price": 3.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sides-side-sliced-tomato",
+            "name": "Side Sliced Tomato",
+            "category": "Food",
+            "subcategory": "Sides",
+            "price": 1.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sides-side-of-bacon",
+            "name": "Side of Bacon",
+            "category": "Food",
+            "subcategory": "Sides",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sides-side-of-sausage",
+            "name": "Side of Sausage",
+            "category": "Food",
+            "subcategory": "Sides",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sides-snack-bags",
+            "name": "Snack Bags",
+            "category": "Food",
+            "subcategory": "Sides",
+            "price": 1.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sides-roasted-sweet-potatoes",
+            "name": "Roasted Sweet Potatoes",
+            "category": "Food",
+            "subcategory": "Sides",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-sides-fruit-bowl",
+            "name": "Fruit Bowl",
+            "category": "Food",
+            "subcategory": "Sides",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-kids-menu-bagel-cream-cheese",
+            "name": "Bagel & Cream Cheese",
+            "category": "Food",
+            "subcategory": "Kids Menu",
+            "price": 3.5,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-kids-menu-toast-w-peanut-butter-banana-honey",
+            "name": "Toast w/ Peanut Butter, Banana & Honey",
+            "category": "Food",
+            "subcategory": "Kids Menu",
+            "price": 5.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-kids-menu-toast",
+            "name": "Toast",
+            "category": "Food",
+            "subcategory": "Kids Menu",
+            "price": 3.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-kids-menu-fruit-bowl",
+            "name": "Fruit Bowl",
+            "category": "Food",
+            "subcategory": "Kids Menu",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-kids-menu-scrambled-egg",
+            "name": "Scrambled Egg",
+            "category": "Food",
+            "subcategory": "Kids Menu",
+            "price": 2.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-kids-menu-side-of-bacon",
+            "name": "Side of Bacon",
+            "category": "Food",
+            "subcategory": "Kids Menu",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-kids-menu-side-of-sausage",
+            "name": "Side of Sausage",
+            "category": "Food",
+            "subcategory": "Kids Menu",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-kids-menu-side-sliced-avocado",
+            "name": "Side Sliced Avocado",
+            "category": "Food",
+            "subcategory": "Kids Menu",
+            "price": 3.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-kids-menu-house-salad",
+            "name": "House Salad",
+            "category": "Food",
+            "subcategory": "Kids Menu",
+            "price": 5.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-specials-breakfast-wrap",
+            "name": "Breakfast Wrap",
+            "category": "Food",
+            "subcategory": "Specials",
+            "price": 10.0,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-specials-protein-bites",
+            "name": "Protein Bites",
+            "category": "Food",
+            "subcategory": "Specials",
+            "price": 6.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-specials-maple-sage-sandwich",
+            "name": "Maple Sage Sandwich",
+            "category": "Food",
+            "subcategory": "Specials",
+            "price": 8.0,
+            "currency": "USD",
+            "price_is_from": true,
+            "dietary_tags": []
+        },
+        {
+            "id": "food-specials-mediterranean-board",
+            "name": "Mediterranean Board",
+            "category": "Food",
+            "subcategory": "Specials",
+            "price": 16.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-croissant-chocolate-croissant",
+            "name": "Chocolate Croissant",
+            "category": "Pastries",
+            "subcategory": "Croissant",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-croissant-almond-croissant",
+            "name": "Almond Croissant",
+            "category": "Pastries",
+            "subcategory": "Croissant",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-croissant-croissant",
+            "name": "Croissant",
+            "category": "Pastries",
+            "subcategory": "Croissant",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-danish-cheese-danish",
+            "name": "Cheese Danish",
+            "category": "Pastries",
+            "subcategory": "Danish",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-danish-raspberry-danish",
+            "name": "Raspberry Danish",
+            "category": "Pastries",
+            "subcategory": "Danish",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-danish-apple-danish",
+            "name": "Apple Danish",
+            "category": "Pastries",
+            "subcategory": "Danish",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-scone-maple-blueberry-scone",
+            "name": "Maple Blueberry Scone",
+            "category": "Pastries",
+            "subcategory": "Scone",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-scone-cranberry-orange-scone",
+            "name": "Cranberry Orange Scone",
+            "category": "Pastries",
+            "subcategory": "Scone",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-scone-ginger-pear-scone",
+            "name": "Ginger Pear Scone",
+            "category": "Pastries",
+            "subcategory": "Scone",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-scone-mango-passionfruit-scone",
+            "name": "Mango Passionfruit Scone",
+            "category": "Pastries",
+            "subcategory": "Scone",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-muffin-pumpkin-muffin",
+            "name": "Pumpkin Muffin",
+            "category": "Pastries",
+            "subcategory": "Muffin",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-muffin-cran-orange-muffin",
+            "name": "Cran-Orange Muffin",
+            "category": "Pastries",
+            "subcategory": "Muffin",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-muffin-blueberry-muffin",
+            "name": "Blueberry Muffin",
+            "category": "Pastries",
+            "subcategory": "Muffin",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-muffin-double-choc-muffin",
+            "name": "Double Choc Muffin",
+            "category": "Pastries",
+            "subcategory": "Muffin",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-muffin-chocolate-walnut-banana-muffin",
+            "name": "Chocolate Walnut Banana Muffin",
+            "category": "Pastries",
+            "subcategory": "Muffin",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-muffin-carrot-cake-muffin",
+            "name": "Carrot Cake Muffin",
+            "category": "Pastries",
+            "subcategory": "Muffin",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-muffin-chocolate-banana-muffin",
+            "name": "Chocolate Banana Muffin",
+            "category": "Pastries",
+            "subcategory": "Muffin",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-muffin-banana-muffin",
+            "name": "Banana Muffin",
+            "category": "Pastries",
+            "subcategory": "Muffin",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-gluten-free-gluten-free-banana-chocolate-walnut-muffin",
+            "name": "Gluten-Free Banana Chocolate Walnut Muffin",
+            "category": "Pastries",
+            "subcategory": "Gluten Free",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": [
+                "gluten-free"
+            ]
+        },
+        {
+            "id": "pastries-gluten-free-gluten-free-chocolate-muffin",
+            "name": "Gluten Free Chocolate Muffin",
+            "category": "Pastries",
+            "subcategory": "Gluten Free",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": [
+                "gluten-free"
+            ]
+        },
+        {
+            "id": "pastries-gluten-free-gluten-free-strawberry-muffin",
+            "name": "Gluten Free Strawberry Muffin",
+            "category": "Pastries",
+            "subcategory": "Gluten Free",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": [
+                "gluten-free"
+            ]
+        },
+        {
+            "id": "pastries-gluten-free-gluten-free-chocolate-cookie",
+            "name": "Gluten Free Chocolate Cookie",
+            "category": "Pastries",
+            "subcategory": "Gluten Free",
+            "price": 3.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": [
+                "gluten-free"
+            ]
+        },
+        {
+            "id": "pastries-cookie-pumpkin-chip-cookie",
+            "name": "Pumpkin Chip Cookie",
+            "category": "Pastries",
+            "subcategory": "Cookie",
+            "price": 2.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-cookie-vegan-chocolate-cookie",
+            "name": "Vegan Chocolate Cookie",
+            "category": "Pastries",
+            "subcategory": "Cookie",
+            "price": 2.8,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": [
+                "vegan"
+            ]
+        },
+        {
+            "id": "pastries-cookie-white-chocolate-peppermint-cookie",
+            "name": "White Chocolate Peppermint Cookie",
+            "category": "Pastries",
+            "subcategory": "Cookie",
+            "price": 2.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-cookie-molasses-crinkle-cookie",
+            "name": "Molasses Crinkle Cookie",
+            "category": "Pastries",
+            "subcategory": "Cookie",
+            "price": 3.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-cookie-choc-walnut-muffin-top",
+            "name": "Choc. Walnut Muffin Top",
+            "category": "Pastries",
+            "subcategory": "Cookie",
+            "price": 3.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-cinnamon-roll-cinnamon-roll",
+            "name": "Cinnamon Roll",
+            "category": "Pastries",
+            "subcategory": "Cinnamon Roll",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-cakes-breads-banana-bread",
+            "name": "Banana Bread",
+            "category": "Pastries",
+            "subcategory": "Cakes/Breads",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-cakes-breads-cranberry-crunch-coffee-cake",
+            "name": "Cranberry Crunch Coffee Cake",
+            "category": "Pastries",
+            "subcategory": "Cakes/Breads",
+            "price": 4.5,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-cakes-breads-apple-cinnamon-cake",
+            "name": "Apple Cinnamon Cake",
+            "category": "Pastries",
+            "subcategory": "Cakes/Breads",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        },
+        {
+            "id": "pastries-tarts-pumpkin-spice-bar",
+            "name": "Pumpkin Spice Bar",
+            "category": "Pastries",
+            "subcategory": "Tarts",
+            "price": 4.0,
+            "currency": "USD",
+            "price_is_from": false,
+            "dietary_tags": []
+        }
+    ],
+    "data_notes": [
+        "Item names and prices are transcribed from the supplied source menu.",
+        "A price ending in '+' is stored as the listed starting price with price_is_from set to true.",
+        "Featured items reference the canonical item records in the items array.",
+        "Dietary tags are included only when explicitly indicated by the menu wording or section."
+    ]
+}
