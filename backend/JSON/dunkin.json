@@ -1,0 +1,864 @@
+{
+    "restaurant": "Dunkin'",
+    "currency": "USD",
+    "price_basis": {
+        "drinks": "Medium size for made-to-order drinks; one bottle for bottled drinks.",
+        "food": "One typical serving/order unless a count or package is specified.",
+        "note": "Prices are approximate estimates as of November 2026 and vary by location."
+    },
+    "sections": [
+        {
+            "category": "Featured Deals",
+            "items": [
+                {
+                    "name": "$6 Meal Deal",
+                    "price_usd": 6.0
+                }
+            ]
+        },
+        {
+            "category": "Iced Coffee, Cold Brew & Espresso",
+            "items": [
+                {
+                    "name": "Original Blend Iced Coffee",
+                    "price_usd": 3.49,
+                    "subcategory": "Coffee"
+                },
+                {
+                    "name": "Cold Brew",
+                    "price_usd": 4.29,
+                    "subcategory": "Cold Brew"
+                },
+                {
+                    "name": "Cold Brew with Cold Foam",
+                    "price_usd": 5.29,
+                    "subcategory": "Cold Brew"
+                },
+                {
+                    "name": "Brown Sugar Shakin' Espresso",
+                    "price_usd": 4.99,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Shakin' Espresso",
+                    "price_usd": 4.79,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Iced Latte",
+                    "price_usd": 4.79,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Iced Dunkalatte",
+                    "price_usd": 5.29,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Make Your Own Cloud Latte",
+                    "price_usd": 5.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Pumpkin Spice Iced Signature Latte",
+                    "price_usd": 5.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Toasted White Chocolate Iced Signature Latte",
+                    "price_usd": 5.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Caramel Craze Iced Signature Latte",
+                    "price_usd": 5.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Cocoa Mocha Iced Signature Latte",
+                    "price_usd": 5.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Iced Cappuccino",
+                    "price_usd": 4.79,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Iced Macchiato",
+                    "price_usd": 5.09,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Iced Americano",
+                    "price_usd": 3.79,
+                    "subcategory": "Espresso"
+                }
+            ]
+        },
+        {
+            "category": "Iced Refreshers, Speciality & Tea",
+            "items": [
+                {
+                    "name": "Dunkin' Refreshers",
+                    "price_usd": 4.49,
+                    "subcategory": "Refreshers"
+                },
+                {
+                    "name": "Dunkin' Lemonade Refreshers",
+                    "price_usd": 4.79,
+                    "subcategory": "Refreshers"
+                },
+                {
+                    "name": "Daydream Refreshers",
+                    "price_usd": 4.79,
+                    "subcategory": "Refreshers"
+                },
+                {
+                    "name": "Dunkin' Sparkling Refreshers",
+                    "price_usd": 4.79,
+                    "subcategory": "Refreshers"
+                },
+                {
+                    "name": "Light Dunkin' Refreshers",
+                    "price_usd": 4.49,
+                    "subcategory": "Refreshers"
+                },
+                {
+                    "name": "Mix Your Own Refresher",
+                    "price_usd": 4.79,
+                    "subcategory": "Refreshers"
+                },
+                {
+                    "name": "Dunkin' Zero",
+                    "price_usd": 3.49,
+                    "subcategory": "Specialty"
+                },
+                {
+                    "name": "Lemonade",
+                    "price_usd": 3.49,
+                    "subcategory": "Specialty"
+                },
+                {
+                    "name": "Iced Tea",
+                    "price_usd": 2.99,
+                    "subcategory": "Specialty"
+                },
+                {
+                    "name": "Iced Tea",
+                    "price_usd": 2.99,
+                    "subcategory": "Tea"
+                },
+                {
+                    "name": "Iced Matcha Latte",
+                    "price_usd": 5.09,
+                    "subcategory": "Tea"
+                },
+                {
+                    "name": "Iced Chai Latte",
+                    "price_usd": 4.79,
+                    "subcategory": "Tea"
+                }
+            ]
+        },
+        {
+            "category": "Hot Drinks",
+            "items": [
+                {
+                    "name": "Original Blend",
+                    "price_usd": 2.99,
+                    "subcategory": "Coffee"
+                },
+                {
+                    "name": "Dunkin' Midnight",
+                    "price_usd": 2.99,
+                    "subcategory": "Coffee"
+                },
+                {
+                    "name": "Box O' JoeÂ® Coffee",
+                    "price_usd": 22.99,
+                    "subcategory": "Coffee"
+                },
+                {
+                    "name": "Latte",
+                    "price_usd": 4.79,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Dunkalatteâ„¢",
+                    "price_usd": 5.29,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Pumpkin Spice Signature Latte",
+                    "price_usd": 5.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Toasted White Chocolate Signature Latte",
+                    "price_usd": 5.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Caramel Craze Signature Latte",
+                    "price_usd": 5.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Cocoa Mocha Signature Latte",
+                    "price_usd": 5.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Cappuccino",
+                    "price_usd": 4.79,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Macchiato",
+                    "price_usd": 5.09,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Americano",
+                    "price_usd": 3.79,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Espresso",
+                    "price_usd": 2.49,
+                    "subcategory": "Espresso"
+                },
+                {
+                    "name": "Tea",
+                    "price_usd": 2.79,
+                    "subcategory": "Specialty & Tea"
+                },
+                {
+                    "name": "Matcha Latte",
+                    "price_usd": 5.09,
+                    "subcategory": "Specialty & Tea"
+                },
+                {
+                    "name": "Chai Latte",
+                    "price_usd": 4.79,
+                    "subcategory": "Specialty & Tea"
+                },
+                {
+                    "name": "Hot Chocolate",
+                    "price_usd": 3.49,
+                    "subcategory": "Hot Chocolate & More"
+                },
+                {
+                    "name": "Box O' JoeÂ® Hot Chocolate",
+                    "price_usd": 22.99,
+                    "subcategory": "Hot Chocolate & More"
+                }
+            ]
+        },
+        {
+            "category": "Frozen Drinks",
+            "items": [
+                {
+                    "name": "Coffee Chiller",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Caramel Creme Coffee Chiller",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Triple Mocha Coffee Chiller",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Frozen Matcha Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Frozen Chocolate",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Strawberry CoolattaÂ®",
+                    "price_usd": 5.09
+                },
+                {
+                    "name": "Vanilla Bean CoolattaÂ®",
+                    "price_usd": 5.09
+                },
+                {
+                    "name": "Blue Raspberry Coolattaâ€‹Â®",
+                    "price_usd": 5.09
+                }
+            ]
+        },
+        {
+            "category": "Sandwiches & Wraps",
+            "items": [
+                {
+                    "name": "Grilled Cheese",
+                    "price_usd": 5.49,
+                    "subcategory": "Signature Sandwiches"
+                },
+                {
+                    "name": "Maple Sugar Bacon Breakfast Sandwich",
+                    "price_usd": 5.99,
+                    "subcategory": "Signature Sandwiches"
+                },
+                {
+                    "name": "Sourdough Breakfast Sandwich",
+                    "price_usd": 6.49,
+                    "subcategory": "Signature Sandwiches"
+                },
+                {
+                    "name": "Bacon, Egg and Cheese",
+                    "price_usd": 5.49,
+                    "subcategory": "Breakfast Sandwiches"
+                },
+                {
+                    "name": "Sausage, Egg and Cheese",
+                    "price_usd": 5.49,
+                    "subcategory": "Breakfast Sandwiches"
+                },
+                {
+                    "name": "Egg and Cheese",
+                    "price_usd": 4.49,
+                    "subcategory": "Breakfast Sandwiches"
+                },
+                {
+                    "name": "Turkey Sausage, Egg and Cheese",
+                    "price_usd": 5.49,
+                    "subcategory": "Breakfast Sandwiches"
+                },
+                {
+                    "name": "Wake-Up WrapÂ® - Bacon, Egg and Cheese",
+                    "price_usd": 3.49,
+                    "subcategory": "Wake-Up Wraps"
+                },
+                {
+                    "name": "Wake-Up WrapÂ® - Maple Sugar Bacon",
+                    "price_usd": 3.49,
+                    "subcategory": "Wake-Up Wraps"
+                },
+                {
+                    "name": "Wake-Up WrapÂ® - Sausage, Egg and Cheese",
+                    "price_usd": 3.49,
+                    "subcategory": "Wake-Up Wraps"
+                },
+                {
+                    "name": "Wake-Up WrapÂ® - Turkey Sausage, Egg and Cheese",
+                    "price_usd": 3.49,
+                    "subcategory": "Wake-Up Wraps"
+                },
+                {
+                    "name": "Wake-Up WrapÂ® - Egg and Cheese",
+                    "price_usd": 2.99,
+                    "subcategory": "Wake-Up Wraps"
+                }
+            ]
+        },
+        {
+            "category": "Donuts, Bagels & Bakery",
+            "items": [
+                {
+                    "name": "25 Ct. Doom MUNCHKINSÂ® Donut Hole Treats Tin",
+                    "price_usd": 11.99,
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Doomsday Donut",
+                    "price_usd": 2.49,
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Doomsday MUNCHKINSÂ® Donut Hole Treats",
+                    "price_usd": 4.99,
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Avenging Donut",
+                    "price_usd": 2.49,
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Avenging MUNCHKINSÂ® Donut Hole Treats",
+                    "price_usd": 4.99,
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Classic Donuts",
+                    "price_usd": 1.99,
+                    "serving": "each",
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "MUNCHKINSÂ® Donut Hole Treats",
+                    "price_usd": 4.99,
+                    "serving": "10-count",
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Half Dozen Donuts",
+                    "price_usd": 10.99,
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Dozen Donuts",
+                    "price_usd": 19.99,
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Muffins",
+                    "price_usd": 3.49,
+                    "serving": "each",
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Plain Stuffed Bagel Minis",
+                    "price_usd": 3.49,
+                    "serving": "2-count",
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Everything Stuffed Bagel Minis",
+                    "price_usd": 3.49,
+                    "serving": "2-count",
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Bagels",
+                    "price_usd": 2.49,
+                    "serving": "each",
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Bagels with Cream Cheese Spread",
+                    "price_usd": 3.99,
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "Butter Croissant",
+                    "price_usd": 2.99,
+                    "subcategory": "Donuts"
+                },
+                {
+                    "name": "English Muffin",
+                    "price_usd": 2.49,
+                    "subcategory": "Donuts"
+                }
+            ]
+        },
+        {
+            "category": "Savory Bites",
+            "items": [
+                {
+                    "name": "Bacon-Topped Avocado Toast",
+                    "price_usd": 4.99,
+                    "subcategory": "Toasts"
+                },
+                {
+                    "name": "Avocado Toast",
+                    "price_usd": 3.99,
+                    "subcategory": "Toasts"
+                },
+                {
+                    "name": "Bacon & Cheddar Omelet Bites",
+                    "price_usd": 4.99,
+                    "serving": "2-count",
+                    "subcategory": "Bites"
+                },
+                {
+                    "name": "Plain Stuffed Bagel Minis",
+                    "price_usd": 3.49,
+                    "serving": "2-count",
+                    "subcategory": "Bites"
+                },
+                {
+                    "name": "Everything Stuffed Bagel Minis",
+                    "price_usd": 3.49,
+                    "serving": "2-count",
+                    "subcategory": "Bites"
+                },
+                {
+                    "name": "Ham & Swiss Croissant Stuffer",
+                    "price_usd": 5.99,
+                    "subcategory": "Snacks & Sides"
+                },
+                {
+                    "name": "Maple Sugar Snackin' Bacon",
+                    "price_usd": 3.99,
+                    "subcategory": "Snacks & Sides"
+                },
+                {
+                    "name": "Plain Stuffed Bagel Minis",
+                    "price_usd": 3.49,
+                    "serving": "2-count",
+                    "subcategory": "Snacks & Sides"
+                },
+                {
+                    "name": "Everything Stuffed Bagel Minis",
+                    "price_usd": 3.49,
+                    "serving": "2-count",
+                    "subcategory": "Snacks & Sides"
+                },
+                {
+                    "name": "Hash Browns",
+                    "price_usd": 1.99,
+                    "subcategory": "Snacks & Sides"
+                },
+                {
+                    "name": "Loaded Hash Browns",
+                    "price_usd": 4.49,
+                    "subcategory": "Snacks & Sides"
+                },
+                {
+                    "name": "MUNCHKINSÂ® Donut Hole Treats",
+                    "price_usd": 4.99,
+                    "serving": "10-count",
+                    "subcategory": "Snacks & Sides"
+                },
+                {
+                    "name": "Spreads",
+                    "price_usd": 1.0,
+                    "subcategory": "Snacks & Sides"
+                }
+            ]
+        },
+        {
+            "category": "Brew At Home",
+            "items": [
+                {
+                    "name": "Packaged Coffee",
+                    "price_usd": 10.99
+                },
+                {
+                    "name": "K-CupÂ® Pods",
+                    "price_usd": 12.99
+                }
+            ]
+        },
+        {
+            "category": "Bottled Drinks",
+            "items": [
+                {
+                    "name": "Bottled Water",
+                    "price_usd": 2.49
+                },
+                {
+                    "name": "TropicanaÂ® Orange Juice",
+                    "price_usd": 3.29
+                },
+                {
+                    "name": "TropicanaÂ® Apple Juice",
+                    "price_usd": 3.29
+                },
+                {
+                    "name": "Ocean SprayÂ® Cranberry Juice",
+                    "price_usd": 3.29
+                },
+                {
+                    "name": "PepsiÂ®",
+                    "price_usd": 2.99
+                },
+                {
+                    "name": "Diet PepsiÂ®",
+                    "price_usd": 2.99
+                },
+                {
+                    "name": "Pepsi Â® Zero Sugar",
+                    "price_usd": 2.99
+                },
+                {
+                    "name": "StarryÂ®",
+                    "price_usd": 2.99
+                },
+                {
+                    "name": "Mountain Dew Â®",
+                    "price_usd": 2.99
+                },
+                {
+                    "name": "Sparkling Orange CELSIUSÂ®",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "DoleÂ® Lemonade",
+                    "price_usd": 2.99
+                },
+                {
+                    "name": "GatoradeÂ® - Cool Blue",
+                    "price_usd": 2.99
+                },
+                {
+                    "name": "GatoradeÂ® - Lemon Lime",
+                    "price_usd": 2.99
+                },
+                {
+                    "name": "RockstarÂ®",
+                    "price_usd": 3.99
+                },
+                {
+                    "name": "NakedÂ®  Smoothie",
+                    "price_usd": 4.49
+                }
+            ]
+        },
+        {
+            "category": "Avengers Unite",
+            "items": [
+                {
+                    "name": "Doom's Orders Energy",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Doom Cloud Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Wakandan Daydream Refresher",
+                    "price_usd": 4.79
+                },
+                {
+                    "name": "Optic Blast Lemonade",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Clobbered Cloud Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Iced Captain'ccino",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Doomsday Donut",
+                    "price_usd": 2.49
+                },
+                {
+                    "name": "Doomsday MUNCHKINSÂ® Donut Hole Treats",
+                    "price_usd": 4.99
+                },
+                {
+                    "name": "Avenging Donut",
+                    "price_usd": 2.49
+                },
+                {
+                    "name": "Avenging MUNCHKINSÂ® Donut Hole Treats",
+                    "price_usd": 4.99
+                },
+                {
+                    "name": "25 Ct. Doom MUNCHKINSÂ® Donut Hole Treats Tin",
+                    "price_usd": 11.99
+                }
+            ]
+        },
+        {
+            "category": "Holiday Faves",
+            "items": [
+                {
+                    "name": "Cookie Butter Cloud Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Toasted White Chocolate Iced Signature Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Toasted White Chocolate Signature Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Cookie Butter Matcha",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Cookie Butter Cloud Dunkalatteâ„¢",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Cookie Butter Hot Chocolate",
+                    "price_usd": 3.99
+                },
+                {
+                    "name": "Raspberry White Chocolate Matcha",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Almond White Chocolate Shakin' Espresso",
+                    "price_usd": 5.19
+                },
+                {
+                    "name": "Iced Cookie Butter Oat Chai Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Toasted White Chocolate Cloud Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Cookie Butter Cold Brew",
+                    "price_usd": 5.29
+                },
+                {
+                    "name": "Spiced Cookie Iced Coffee",
+                    "price_usd": 3.99
+                }
+            ]
+        },
+        {
+            "category": "Latest Drops",
+            "items": [
+                {
+                    "name": "Green Apple Dunkin' Zero",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Midnight Apple Dunkin' Zero",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Berry Clementine Refresher",
+                    "price_usd": 4.79
+                },
+                {
+                    "name": "Berry Daydream Refresher",
+                    "price_usd": 4.79
+                },
+                {
+                    "name": "Pumpkin Spice Iced Signature Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Pumpkin Cloud Dunkalatteâ„¢",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Pumpkin Patch Cloud Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Marshmallow Cloud Dunkalatteâ„¢",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Candy Kiss Dunkin' Zero",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Maple Sugar Bacon Breakfast Sandwich",
+                    "price_usd": 5.99
+                },
+                {
+                    "name": "Wake-Up WrapÂ® - Maple Sugar Bacon",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Maple Sugar Snackin' Bacon",
+                    "price_usd": 3.99
+                }
+            ]
+        },
+        {
+            "category": "Refreshing Sips",
+            "items": [
+                {
+                    "name": "Green Apple Dunkin' Zero",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Midnight Apple Dunkin' Zero",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Berry Daydream Refresher",
+                    "price_usd": 4.79
+                },
+                {
+                    "name": "Light Dunkin' Refreshers",
+                    "price_usd": 4.49
+                },
+                {
+                    "name": "Mango Pineapple Lemonade Refresher",
+                    "price_usd": 4.79
+                },
+                {
+                    "name": "Strawberry Daydream Refresher",
+                    "price_usd": 4.79
+                },
+                {
+                    "name": "Orchard Twist Dunkin' Zero",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Blushpop Dunkin' Zero",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Tropical Mango Dunkin' Zero",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Mix Your Own Refresher",
+                    "price_usd": 4.79
+                }
+            ]
+        },
+        {
+            "category": "Crafted Coffees",
+            "items": [
+                {
+                    "name": "Make Your Own Cloud Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Pumpkin Spice Iced Signature Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Nutty Pumpkin Iced Coffee",
+                    "price_usd": 3.99
+                },
+                {
+                    "name": "Marshmallow Cloud Dunkalatteâ„¢",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Pumpkin Spice Signature Latte",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Nutty Pumpkin Coffee",
+                    "price_usd": 3.49
+                },
+                {
+                    "name": "Coffee Chiller",
+                    "price_usd": 5.49
+                },
+                {
+                    "name": "Dunkalatteâ„¢",
+                    "price_usd": 5.29
+                },
+                {
+                    "name": "Brown Sugar Shakin' Espresso",
+                    "price_usd": 4.99
+                },
+                {
+                    "name": "Vanilla Creme Cold Brew",
+                    "price_usd": 5.29
+                },
+                {
+                    "name": "Cold Brew",
+                    "price_usd": 4.29
+                },
+                {
+                    "name": "Cold Brew with Cold Foam",
+                    "price_usd": 5.29
+                },
+                {
+                    "name": "The Caramel Cold Foam",
+                    "price_usd": 5.29
+                }
+            ]
+        }
+    ]
+}
