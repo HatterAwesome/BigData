@@ -1,0 +1,931 @@
+{
+    "restaurant": "Boston Coffee House",
+    "source_file": "Boston Coffee.txt",
+    "currency": "USD",
+    "categories": [
+        {
+            "name": "Breakfast",
+            "subcategories": [
+                {
+                    "name": "Egg & Cheese Classics",
+                    "items": [
+                        {
+                            "name": "Egg and Cheese on English Muffin or Toast",
+                            "price": 4.95
+                        },
+                        {
+                            "name": "Egg and Cheese on Bagel",
+                            "price": 5.75
+                        },
+                        {
+                            "name": "Egg and Cheese on Pretzel Bun",
+                            "price": 6.25
+                        },
+                        {
+                            "name": "Egg and Cheese on Croissant",
+                            "price": 5.95
+                        },
+                        {
+                            "name": "Egg and Cheese on Biscuit",
+                            "price": 5.25
+                        }
+                    ],
+                    "add_ons": [
+                        {
+                            "name": "Ham, bacon, or sausage",
+                            "price": 2.75
+                        },
+                        {
+                            "name": "Egg whites",
+                            "price": 1.25
+                        }
+                    ]
+                },
+                {
+                    "name": "Signature Breakfast Sandwiches",
+                    "items": [
+                        {
+                            "name": "Boston Brunch Croissant",
+                            "price": 7.95,
+                            "description": "Egg, cheese, choice of meat, arugula, and hot honey on a croissant."
+                        },
+                        {
+                            "name": "Boston Breakfast Biscuit",
+                            "price": 7.95,
+                            "description": "Egg, Gouda cheese, sausage, onion jam, and sriracha mayo on a biscuit."
+                        },
+                        {
+                            "name": "Avocado Egg White",
+                            "price": 8.95,
+                            "description": "3 egg whites, cheese, avocado, tomato, spinach, and hollandaise sauce on whole-wheat bread."
+                        },
+                        {
+                            "name": "Chipotle Breakfast Ciabatta",
+                            "price": 8.25,
+                            "description": "Egg, cheese, choice of meat, mushrooms, onions, and chipotle dressing on ciabatta."
+                        },
+                        {
+                            "name": "Sliced Egg Croissant",
+                            "price": 6.75,
+                            "description": "Sliced hard-boiled eggs on a toasted croissant with lettuce, tomato, and mayo."
+                        },
+                        {
+                            "name": "French Toast Panini",
+                            "price": 8.25,
+                            "description": "Egg, cheese, and ham on French toast."
+                        }
+                    ]
+                },
+                {
+                    "name": "Breakfast Wraps",
+                    "items": [
+                        {
+                            "name": "Power Protein Wrap",
+                            "price": 8.95,
+                            "description": "4 egg whites, cheddar cheese, choice of meat, grilled in a wrap."
+                        },
+                        {
+                            "name": "P3 - Power Protein Plus",
+                            "price": 9.95,
+                            "description": "4 egg whites, cheddar cheese, hash brown, mushrooms, and choice of meat with chipotle sauce, grilled in a wrap."
+                        },
+                        {
+                            "name": "Steakhouse Egg Wrap",
+                            "price": 8.25,
+                            "description": "Eggs, cheese, sliced roast beef, mushrooms, and onions, grilled in a wrap."
+                        },
+                        {
+                            "name": "Breakfast Burrito",
+                            "price": 7.95,
+                            "description": "Eggs, cheese, salsa, and tomato with choice of meat.",
+                            "add_ons": [
+                                {
+                                    "name": "Make it MEGA - extra eggs, meat, and hash brown",
+                                    "price": 2.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Toasts",
+                    "items": [
+                        {
+                            "name": "The Toast of Avocado",
+                            "description": "Cranberry date focaccia toast, fresh avocado, tomatoes, onions, feta cheese, finished with balsamic glaze.",
+                            "prices": [
+                                {
+                                    "size": "Single",
+                                    "price": 6.95
+                                },
+                                {
+                                    "size": "Double",
+                                    "price": 9.97
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sunrise Toast",
+                            "description": "Cranberry date focaccia toast, cream cheese, sliced hard-boiled egg, apple slices, arugula, and honey.",
+                            "prices": [
+                                {
+                                    "size": "Single",
+                                    "price": 6.95
+                                },
+                                {
+                                    "size": "Double",
+                                    "price": 9.97
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sweet Heat Sourdough Toast",
+                            "description": "Toasted sourdough, cream cheese, tomatoes, drizzled with hot honey.",
+                            "prices": [
+                                {
+                                    "size": "Single",
+                                    "price": 5.95
+                                },
+                                {
+                                    "size": "Double",
+                                    "price": 7.97
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Pancakes, French Toast & Waffles",
+                    "items": [
+                        {
+                            "name": "Pancakes",
+                            "price": 5.49
+                        },
+                        {
+                            "name": "French Toast",
+                            "price": 6.2
+                        },
+                        {
+                            "name": "Belgian Waffle",
+                            "price": 6.5
+                        }
+                    ],
+                    "add_ons": [
+                        {
+                            "name": "Strawberries & Cream, Banana Pecan, Bananas Foster, or Chocolate Chips & Cream",
+                            "price": 2.79
+                        }
+                    ]
+                },
+                {
+                    "name": "Oatmeal & Sides",
+                    "items": [
+                        {
+                            "name": "Oatmeal",
+                            "price": 4.75
+                        },
+                        {
+                            "name": "Hash Brown",
+                            "price": 2.5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Lunch",
+            "subcategories": [
+                {
+                    "name": "Signature Sandwiches",
+                    "items": [
+                        {
+                            "name": "Colonial Club",
+                            "price": 10.97,
+                            "description": "Turkey, ham, crispy bacon, avocado, spinach, tomatoes, and avocado dressing on wheat bread."
+                        },
+                        {
+                            "name": "Cambridge Croissant",
+                            "price": 9.5,
+                            "description": "Turkey, provolone, spinach, tomatoes, and creamy avocado spread on a croissant."
+                        },
+                        {
+                            "name": "Country Chicken Salad Croissant",
+                            "price": 9.75,
+                            "description": "Chicken salad, dried cranberries, pecans, apple slices, Swiss cheese, and lettuce on a croissant."
+                        },
+                        {
+                            "name": "Ham n' Apple",
+                            "price": 9.5,
+                            "description": "Black Forest ham, cheddar, apple slices, Apple Ranch, and honey mustard on a pretzel bun."
+                        },
+                        {
+                            "name": "Roast Beef Arugula",
+                            "price": 9.97,
+                            "description": "Roast beef, balsamic onions, arugula, horseradish mayo, and shaved Parmesan on grilled ciabatta."
+                        },
+                        {
+                            "name": "Turkey Twist",
+                            "price": 9.97,
+                            "description": "Turkey, bacon, arugula, tomato, onion, roasted red peppers, and mayo on a pretzel bun."
+                        },
+                        {
+                            "name": "Sweet & Savory Stack",
+                            "price": 9.97,
+                            "description": "Roast beef, onions, roasted red peppers, onion jam, horseradish sauce, and provolone, grilled on artisan sourdough."
+                        }
+                    ]
+                },
+                {
+                    "name": "Melts & Paninis",
+                    "items": [
+                        {
+                            "name": "Panini Mozzarella Melt",
+                            "price": 8.5,
+                            "description": "Fresh mozzarella, tomatoes, red onions, and roasted red peppers with balsamic glaze on artisan sourdough.",
+                            "add_ons": [
+                                {
+                                    "name": "Grilled chicken or turkey",
+                                    "price": 2.97
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Chicken Pesto Melt",
+                            "price": 9.5,
+                            "description": "Grilled chicken, basil pesto, ranch, tomatoes, and provolone on focaccia."
+                        },
+                        {
+                            "name": "Chipotle Chicken Melt",
+                            "price": 9.5,
+                            "description": "Grilled chicken, mushrooms, onions, and tomatoes with chipotle dressing and provolone on focaccia."
+                        },
+                        {
+                            "name": "Tuna Melt",
+                            "price": 8.97,
+                            "description": "Tuna salad, tomatoes, and American cheese, grilled on focaccia."
+                        },
+                        {
+                            "name": "Cranberry Chicken Panini",
+                            "price": 10.97,
+                            "description": "Grilled chicken, Gouda, onion jam, tomatoes, and arugula on cranberry date focaccia with sriracha mayo."
+                        },
+                        {
+                            "name": "Turkey Reuben",
+                            "price": 9.25,
+                            "description": "Turkey, Swiss, sauerkraut, and Thousand Island dressing, grilled on rye bread."
+                        },
+                        {
+                            "name": "Smoked Gouda Grilled Cheese",
+                            "price": 8.97,
+                            "description": "Smoked Gouda, American, and cheddar cheeses, tomatoes, arugula, and onion jam on grilled artisan sourdough."
+                        }
+                    ]
+                },
+                {
+                    "name": "Lunch Wraps",
+                    "items": [
+                        {
+                            "name": "Turkey BLT Wrap",
+                            "price": 9.5,
+                            "description": "All-natural turkey, bacon, romaine, tomatoes, and mayo."
+                        },
+                        {
+                            "name": "Tuscan Chicken Wrap",
+                            "price": 9.5,
+                            "description": "Grilled chicken, roasted red peppers, sliced artichokes, Kalamata olives, and creamy feta, grilled in a wrap."
+                        },
+                        {
+                            "name": "Grilled Chicken Wrap",
+                            "price": 9.5,
+                            "description": "Grilled chicken, romaine, and tomatoes with choice of dressing.",
+                            "dressing_options": [
+                                "Caesar",
+                                "Chipotle Mayo",
+                                "Apple Ranch",
+                                "Honey Mustard",
+                                "Buffalo Ranch"
+                            ]
+                        },
+                        {
+                            "name": "Avocado Chicken Caesar Wrap",
+                            "price": 9.5,
+                            "description": "Grilled chicken, sliced avocado, romaine, shaved Parmesan, and Caesar dressing, lightly grilled."
+                        }
+                    ]
+                },
+                {
+                    "name": "Make It a Meal",
+                    "items": [
+                        {
+                            "name": "Pasta Salad with a sandwich",
+                            "price": 1.97
+                        },
+                        {
+                            "name": "Potato Salad with a sandwich",
+                            "price": 1.97
+                        },
+                        {
+                            "name": "Chips with a sandwich",
+                            "price": 1.97
+                        }
+                    ],
+                    "add_ons": [
+                        {
+                            "name": "Cup of soup added to a full sandwich",
+                            "price": 3.5
+                        },
+                        {
+                            "name": "Bowl of soup added to a full sandwich",
+                            "price": 4.25
+                        }
+                    ]
+                },
+                {
+                    "name": "Signature Salads",
+                    "items": [
+                        {
+                            "name": "Chicken Dijon Salad",
+                            "price": 11.95,
+                            "description": "Romaine, tomatoes, onions, fresh mushrooms, and sweetened pecans, topped with grilled chicken and bacon and warm Honey-Dijon dressing."
+                        },
+                        {
+                            "name": "Olympian Salad",
+                            "price": 10.75,
+                            "description": "Chopped romaine, Kalamata olives, roasted red peppers, sliced artichokes, tomatoes, onions, bacon, and feta crumbles with Greek vinaigrette."
+                        },
+                        {
+                            "name": "Summer Salad",
+                            "price": 9.97,
+                            "description": "Baby spinach blend, sliced green apples, dried cranberries, sweetened pecans, fresh mushrooms, shredded cheddar, sliced hard-boiled egg with apple cider vinaigrette.",
+                            "add_ons": [
+                                {
+                                    "name": "Grilled chicken",
+                                    "price": 2.97
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Strawberry Feta Salad",
+                            "price": 9.97,
+                            "description": "Arugula and spinach with fresh strawberries, onions, and cucumbers, tossed in honey-balsamic dressing and topped with feta cheese crumbles and sliced almonds.",
+                            "add_ons": [
+                                {
+                                    "name": "Grilled chicken, avocado, or turkey",
+                                    "price": 2.97
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Spinach Avocado",
+                            "price": 9.97,
+                            "description": "Spinach, sliced avocado, onions, sliced hard-boiled egg, tomatoes, cucumbers, dried cranberries, and almonds with creamy avocado dressing.",
+                            "add_ons": [
+                                {
+                                    "name": "Grilled chicken",
+                                    "price": 2.97
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Chef Salad",
+                            "price": 10.95,
+                            "description": "Romaine, tomatoes, red onions, cucumbers, and black olives with turkey, ham, cheese, sliced hard-boiled egg, and croutons. Served with choice of dressing."
+                        }
+                    ],
+                    "notes": [
+                        "Any salad can be made into a wrap."
+                    ]
+                },
+                {
+                    "name": "Classic Salads",
+                    "items": [
+                        {
+                            "name": "Garden Salad",
+                            "price": 7.25,
+                            "description": "Chopped romaine, tomatoes, onions, olives, cucumbers, and croutons.",
+                            "add_ons": [
+                                {
+                                    "name": "Grilled chicken, tuna salad, or chicken salad",
+                                    "price": 2.97
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Caesar Salad",
+                            "price": 7.25,
+                            "description": "Chopped romaine, Parmesan, and croutons with Caesar dressing.",
+                            "add_ons": [
+                                {
+                                    "name": "Grilled chicken or turkey",
+                                    "price": 2.97
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Mixed Mozzarella Salad",
+                            "price": 8.97,
+                            "description": "Chopped romaine, fresh mozzarella, tomatoes, red onion, and croutons, finished with balsamic glaze and balsamic vinaigrette.",
+                            "add_ons": [
+                                {
+                                    "name": "Grilled chicken, turkey, or avocado",
+                                    "price": 2.97
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Soup",
+                    "items": [
+                        {
+                            "name": "Chicken Velvet",
+                            "description": "House soup available every day; creamy chicken soup with mushrooms, sherry, and tarragon.",
+                            "prices": [
+                                {
+                                    "size": "Cup",
+                                    "price": 4.85
+                                },
+                                {
+                                    "size": "Bowl",
+                                    "price": 5.6
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Soups of the Day",
+                            "description": "Additional selections vary daily.",
+                            "prices": [
+                                {
+                                    "size": "Cup",
+                                    "price": 4.85
+                                },
+                                {
+                                    "size": "Bowl",
+                                    "price": 5.6
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Pick 2",
+                    "items": [
+                        {
+                            "name": "Choose Any Two",
+                            "price": 9.97,
+                            "description": "Choose two: half signature sandwich, half salad, cup of soup, potato salad, pasta salad, or chips. Wraps excluded. Half salad choices: Garden, Caesar, or Mixed Mozzarella. Any other half salad costs an additional $2.50.",
+                            "add_ons": [
+                                {
+                                    "name": "Other half salad upgrade",
+                                    "price": 2.5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Kids",
+            "notes": [
+                "All kids' sandwiches include pasta salad, chips, or apple slices."
+            ],
+            "items": [
+                {
+                    "name": "Grilled Cheese",
+                    "price": 6.5
+                },
+                {
+                    "name": "Grilled Peanut Butter & Banana",
+                    "price": 6.5
+                },
+                {
+                    "name": "Ham & Cheese",
+                    "price": 6.5
+                },
+                {
+                    "name": "Peanut Butter & Jelly",
+                    "price": 6.5
+                },
+                {
+                    "name": "Grilled Nutella & Marshmallow",
+                    "price": 6.5
+                }
+            ]
+        },
+        {
+            "name": "Specialty Drinks",
+            "notes": [
+                "Choose a flavor, then a size. Available hot, iced, or frozen."
+            ],
+            "size_prices": [
+                {
+                    "size": "12 oz",
+                    "shots": "Single shot",
+                    "price": 4.99
+                },
+                {
+                    "size": "16 oz",
+                    "shots": "Double shot",
+                    "price": 5.79
+                },
+                {
+                    "size": "24 oz",
+                    "shots": "Triple shot",
+                    "price": 6.5
+                }
+            ],
+            "flavors": [
+                {
+                    "name": "CafÃ© Mocha",
+                    "flavors": [
+                        "Chocolate"
+                    ]
+                },
+                {
+                    "name": "Boston Caramocha",
+                    "flavors": [
+                        "Chocolate",
+                        "Caramel"
+                    ]
+                },
+                {
+                    "name": "YankeeDoodle",
+                    "flavors": [
+                        "Chocolate",
+                        "Caramel",
+                        "Hazelnut"
+                    ]
+                },
+                {
+                    "name": "Irish Eyes R Smilin'",
+                    "flavors": [
+                        "Irish Cream",
+                        "Vanilla"
+                    ]
+                },
+                {
+                    "name": "Nutty Irish Lady",
+                    "flavors": [
+                        "Hazelnut",
+                        "Irish Cream",
+                        "Cherry"
+                    ]
+                },
+                {
+                    "name": "Mint Mocha Cookie",
+                    "flavors": [
+                        "Mocha",
+                        "Cookie Dough",
+                        "Peppermint"
+                    ]
+                },
+                {
+                    "name": "Coco Mocha Joy",
+                    "flavors": [
+                        "Coconut",
+                        "Chocolate",
+                        "Almond"
+                    ]
+                },
+                {
+                    "name": "Boston Cream",
+                    "flavors": [
+                        "Vanilla",
+                        "White Chocolate",
+                        "Cookie Dough",
+                        "Chocolate Drizzle"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Coffeehouse Classics",
+            "items": [
+                {
+                    "name": "Coffee of the Day",
+                    "prices": [
+                        {
+                            "size": "12 oz",
+                            "price": 3.0
+                        },
+                        {
+                            "size": "16 oz",
+                            "price": 3.75
+                        },
+                        {
+                            "size": "24 oz",
+                            "price": 4.5
+                        }
+                    ]
+                },
+                {
+                    "name": "Cappuccino or Latte",
+                    "prices": [
+                        {
+                            "size": "12 oz",
+                            "price": 4.0
+                        },
+                        {
+                            "size": "16 oz",
+                            "price": 5.0
+                        },
+                        {
+                            "size": "24 oz",
+                            "price": 6.0
+                        }
+                    ]
+                },
+                {
+                    "name": "Iced Coffee",
+                    "prices": [
+                        {
+                            "size": "16 oz",
+                            "price": 3.75
+                        },
+                        {
+                            "size": "24 oz",
+                            "price": 3.99
+                        },
+                        {
+                            "size": "32 oz",
+                            "price": 4.95
+                        }
+                    ]
+                },
+                {
+                    "name": "Vanilla Cream Cold Brew",
+                    "prices": [
+                        {
+                            "size": "16 oz",
+                            "price": 4.5
+                        },
+                        {
+                            "size": "24 oz",
+                            "price": 5.5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Tea, Refreshers & Soda",
+            "items": [
+                {
+                    "name": "Iced Tea",
+                    "prices": [
+                        {
+                            "size": "16 oz",
+                            "price": 3.75
+                        },
+                        {
+                            "size": "24 oz",
+                            "price": 3.99
+                        },
+                        {
+                            "size": "32 oz",
+                            "price": 4.95
+                        }
+                    ]
+                },
+                {
+                    "name": "Roxberry Cooler",
+                    "description": "Hibiscus and berry refresher; mixed berry iced infusion, sweetened with stevia.",
+                    "prices": [
+                        {
+                            "size": "16 oz",
+                            "price": 4.5
+                        },
+                        {
+                            "size": "24 oz",
+                            "price": 4.95
+                        }
+                    ]
+                },
+                {
+                    "name": "Soda",
+                    "prices": [
+                        {
+                            "size": "16 oz",
+                            "price": 3.75
+                        },
+                        {
+                            "size": "24 oz",
+                            "price": 3.99
+                        },
+                        {
+                            "size": "32 oz",
+                            "price": 4.95
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Chai, Chocolate & Smoothies",
+            "items": [
+                {
+                    "name": "Chai Tea",
+                    "available_as": [
+                        "Hot",
+                        "Iced",
+                        "Frozen"
+                    ],
+                    "price": null
+                },
+                {
+                    "name": "Hot Chocolate",
+                    "available_as": [
+                        "Hot",
+                        "Iced",
+                        "Frozen"
+                    ],
+                    "price": null
+                },
+                {
+                    "name": "Smoothies",
+                    "flavors": [
+                        "Strawberry",
+                        "Banana",
+                        "Cookies & Cream"
+                    ],
+                    "price": null
+                }
+            ],
+            "notes": [
+                "The supplied menu lists these items but does not show their prices."
+            ]
+        },
+        {
+            "name": "Bakery",
+            "subcategories": [
+                {
+                    "name": "Bagels",
+                    "items": [
+                        {
+                            "name": "Bagel with Butter or Jelly",
+                            "price": 3.25
+                        },
+                        {
+                            "name": "Bagel with Cream Cheese",
+                            "price": 3.97
+                        }
+                    ]
+                },
+                {
+                    "name": "From the Bakery",
+                    "items": [
+                        {
+                            "name": "Assorted Danish",
+                            "price": 4.95
+                        },
+                        {
+                            "name": "Muffin",
+                            "price": 4.95
+                        },
+                        {
+                            "name": "Croissant",
+                            "price": 4.95
+                        },
+                        {
+                            "name": "English Muffin or Toast",
+                            "price": 2.5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Catering",
+            "subcategories": [
+                {
+                    "name": "Breakfast for a Group",
+                    "items": [
+                        {
+                            "name": "Breakfast Colonial Classic",
+                            "description": "Gourmet muffins, assorted bagels, sliced breakfast loaves, Danish, pastry of the day, and butter croissants.",
+                            "prices": [
+                                {
+                                    "size": "Small",
+                                    "serves": "8-10",
+                                    "price": 50.0
+                                },
+                                {
+                                    "size": "Medium",
+                                    "serves": "15",
+                                    "price": 65.0
+                                },
+                                {
+                                    "size": "Large",
+                                    "serves": "25",
+                                    "price": 99.0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Hot Breakfast Sandwiches",
+                            "description": "Egg and cheese breakfast sandwiches with ham, bacon, or sausage on bagels and croissants.",
+                            "prices": [
+                                {
+                                    "size": "Small",
+                                    "serves": "10",
+                                    "price": 75.0
+                                },
+                                {
+                                    "size": "Medium",
+                                    "serves": "15",
+                                    "price": 105.0
+                                },
+                                {
+                                    "size": "Large",
+                                    "serves": "25",
+                                    "price": 170.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Lunch for a Group",
+                    "notes": [
+                        "All sandwich platters include choice of pasta salad or potato salad. Platters can be customized."
+                    ],
+                    "items": [
+                        {
+                            "name": "Regular Sandwich Platter",
+                            "serves": "5 (10 sandwich halves)",
+                            "price": 60.0,
+                            "source_price_text": "60"
+                        },
+                        {
+                            "name": "Large Sandwich Platter",
+                            "serves": "10 (20 sandwich halves)",
+                            "price": 115.0
+                        },
+                        {
+                            "name": "XL Sandwich Platter",
+                            "serves": "20 (40 sandwich halves)",
+                            "price": 220.0
+                        },
+                        {
+                            "name": "The Boston Boxed Lunch",
+                            "price_each": 14.95,
+                            "minimum_order": 10,
+                            "description": "Individually boxed lunch includes choice of sandwich, chips, and a cookie."
+                        }
+                    ]
+                },
+                {
+                    "name": "Salads & Drinks",
+                    "items": [
+                        {
+                            "name": "Catering Salads",
+                            "salad_options": [
+                                "Farmers' Market Garden Salad",
+                                "Mixed Mozzarella Salad",
+                                "Summer Salad"
+                            ],
+                            "prices": [
+                                {
+                                    "size": "Regular",
+                                    "serves": "8",
+                                    "price": 55.0
+                                },
+                                {
+                                    "size": "Large",
+                                    "serves": "up to 15",
+                                    "price": 95.0
+                                }
+                            ],
+                            "description": "Made to order with choice of dressing. Plates, napkins, and cutlery included."
+                        },
+                        {
+                            "name": "Beantown Coffee Box",
+                            "price": 19.95,
+                            "serves": 8,
+                            "description": "Includes cups, stirrers, sugar, and creamers."
+                        },
+                        {
+                            "name": "Gallon of Iced Tea or Lemonade",
+                            "price": 17.95,
+                            "description": "Includes cups, straws, and ice."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "price_completeness": {
+        "all_prices_in_source_included": true,
+        "unpriced_items": [
+            "Chai Tea",
+            "Hot Chocolate",
+            "Smoothies"
+        ],
+        "notes": [
+            "The source menu does not display prices for Chai Tea, Hot Chocolate, or Smoothies; these are marked as null rather than guessed.",
+            "The Regular Sandwich Platter price appears as '60' in the source and is represented as 60.00 USD.",
+            "The menu lists some add-ons and modifiers separately; these are included as add_ons where applicable."
+        ]
+    }
+}
