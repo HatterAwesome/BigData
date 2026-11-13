@@ -7,7 +7,6 @@ from intent_handler import (
     identify_keywords
 )
 
-
 def get_chatbot_response(user_query):
     """
     Processes the customer's message using the intent handler

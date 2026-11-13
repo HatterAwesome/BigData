@@ -3,7 +3,6 @@ import os
 
 from intent_handler import extract_preferences, identify_intent
 
-
 def load_coffee_data():
     """Loads and normalizes all shop JSON files from backend/JSON/"""
     data = {}
@@ -39,23 +38,17 @@ def load_coffee_data():
 
 def get_menu_items(data, category_path=None, inherited_prices=None):
     """Extracts individual menu items from nested JSON categories."""
-
     if category_path is None:
         category_path = []
-
     if isinstance(data, list):
         items = []
-
         for entry in data:
             items.extend(
                 get_menu_items(entry, category_path, inherited_prices)
             )
-
         return items
-
     if not isinstance(data, dict):
         return []
-
     items = []
 
     current_name = data.get("name")
@@ -98,7 +91,6 @@ def get_menu_items(data, category_path=None, inherited_prices=None):
 
     return items
 
-
 def get_item_prices(item):
     """Gets all available prices for a menu item."""
 
@@ -121,7 +113,6 @@ def get_item_prices(item):
                     prices.append(price)
 
     return prices
-
 
 def search_and_recommend(user_query: str):
     """Searches nested coffee shop menus and recommends matching items."""
@@ -171,18 +162,14 @@ def search_and_recommend(user_query: str):
     ]
 
     max_price = preferences["max_price"]
-
     ranked_items = []
-
     for item in all_items:
 
         # Build searchable text from the entire item
         searchable_text = (
             str(item) + " " + str(item.get("_category", ""))
         ).lower()
-
         score = 0
-
         # Match customer keywords against menu information
         for word in search_words:
             if word in searchable_text:
@@ -195,32 +182,23 @@ def search_and_recommend(user_query: str):
 
         # Match the requested price
         prices = get_item_prices(item)
-
         if max_price is not None:
-
             affordable_prices = [
                 price for price in prices
                 if price <= max_price
             ]
-
             if not affordable_prices:
                 continue
-
             score += 3
-
         if score > 0:
             ranked_items.append((score, item))
-
     # If no specific item matched, use the price filter
     # to find affordable options instead of asking again.
     if not ranked_items and max_price is not None:
-
         for item in all_items:
             prices = get_item_prices(item)
-
             if any(price <= max_price for price in prices):
                 ranked_items.append((1, item))
-
     if not ranked_items:
         if any(word in query for word in [
             "study", "quiet", "wifi", "wi-fi", "seating",
@@ -242,64 +220,45 @@ def search_and_recommend(user_query: str):
             "- What iced drinks do you have?\n"
             "- What has vanilla flavor?"
         )
-
     # Sort by relevance
     ranked_items.sort(key=lambda x: x[0], reverse=True)
-
     # Keep the top three recommendations
     top_items = ranked_items[:3]
-
     restaurant_name = top_items[0][1]["_shop"]
-
     response = (
         f"☕ **Recommendations from {restaurant_name}**\n\n"
     )
-
     for score, item in top_items:
-
         name = item.get("name", "Unknown Item")
         category = item.get("_category", "")
         prices = get_item_prices(item)
-
         response += f"### {name}\n"
-
         if category:
             response += f"**Category:** {category}\n\n"
-
         description = item.get("description")
-
         if description:
             response += f"**Description:** {description}\n\n"
-
         flavors = item.get("flavors")
-
         if flavors:
             response += f"**Flavors:** {', '.join(flavors)}\n\n"
-
         if prices:
             price_options = (
                 item.get("prices") or item.get("_prices") or []
             )
-
             if isinstance(price_options, list) and price_options:
                 displayed = []
-
                 for option in price_options:
                     if not isinstance(option, dict):
                         continue
-
                     price = option.get("price")
-
                     if not isinstance(price, (int, float)):
                         continue
-
                     if max_price is None or price <= max_price:
                         size = option.get("size", "")
                         displayed.append(
                             f"{size}: ${price:.2f}"
                             if size else f"${price:.2f}"
                         )
-
                 if displayed:
                     response += (
                         "**Prices:** " + ", ".join(displayed) + "\n\n"
@@ -308,23 +267,18 @@ def search_and_recommend(user_query: str):
                     response += (
                         f"**Price:** ${min(prices):.2f}\n\n"
                     )
-
             else:
                 affordable = [
                     price for price in prices
                     if max_price is None or price <= max_price
                 ]
-
                 if affordable:
                     response += (
                         f"**Price:** ${min(affordable):.2f}\n\n"
                     )
-
         elif item.get("price") is None:
             response += (
                 "**Price:** Not listed on the supplied menu.\n\n"
             )
-
         response += "---\n\n"
-
     return response

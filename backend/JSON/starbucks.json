@@ -59,7 +59,7 @@
                                     "price_type": "grande_16_oz"
                                 },
                                 {
-                                    "name": "Pepermin Mocha",
+                                    "name": "Peppermint Mocha",
                                     "price_usd": 6.8,
                                     "price_type": "grande_16_oz"
                                 },
@@ -1327,6 +1327,11 @@
                                 },
                                 {
                                     "name": "Matcha Creme Frappuccino Blended Beverage",
+                                    "price_usd": 7.02,
+                                    "price_type": "grande_16_oz"
+                                },
+                                {
+                                    "name" : "Caramel Ribbon Crunch Frappuccino Blended Beverage",
                                     "price_usd": 7.02,
                                     "price_type": "grande_16_oz"
                                 }
