@@ -4,8 +4,10 @@ from agent import search_and_recommend
 from intent_handler import (
     identify_intent,
     extract_preferences,
-    identify_keywords
+    identify_keywords,
+    extract_location
 )
+
 
 def get_chatbot_response(user_query):
     """
@@ -22,13 +24,20 @@ def get_chatbot_response(user_query):
     # Step 3: Identify relevant keywords
     keywords = identify_keywords(user_query)
 
-    # Step 4: Get recommendations from the existing agent
-    recommendation = search_and_recommend(user_query)
+    # Step 4: Identify the requested location
+    location = extract_location(user_query)
 
-    # Step 5: Return the response and extracted information
+    # Step 5: Get recommendations from the agent
+    recommendation = search_and_recommend(
+        user_query,
+        location=location
+    )
+
+    # Step 6: Return the response and extracted information
     return {
         "response": recommendation,
         "intent": intent,
         "preferences": preferences,
-        "keywords": keywords
+        "keywords": keywords,
+        "location": location
     }

@@ -1,3 +1,4 @@
+
 import re
 
 # Keywords used to identify customer requests
@@ -19,6 +20,7 @@ FLAVORS = [
 
 DIETARY = ["dairy free", "vegan", "gluten free", "sugar free"]
 
+
 # Finds the customer's main request
 def identify_intent(user_query):
     query = user_query.lower()
@@ -28,6 +30,30 @@ def identify_intent(user_query):
             return intent
 
     return "general"
+
+
+# Extracts a location from the customer's message
+def extract_location(user_query):
+    query = user_query.strip()
+
+    # Matches phrases such as:
+    # "coffee shops in DeLand"
+    # "coffee near Orlando, FL"
+    # "restaurants around Daytona Beach"
+    match = re.search(
+        r"\b(?:in|near|around|within)\s+"
+        r"([A-Za-z][A-Za-z .'-]*?"
+        r"(?:,\s*[A-Za-z]{2})?)"
+        r"(?=\s*(?:\?|!|\.|$|"
+        r"\bfor\b|\bwith\b|\bthat\b|\bwhere\b))",
+        query,
+        re.IGNORECASE
+    )
+
+    if match:
+        return match.group(1).strip(" .,!?")
+
+    return None
 
 
 # Extracts preferences from the customer's message
@@ -47,11 +73,6 @@ def extract_preferences(user_query):
         ),
         "flavors": [x for x in FLAVORS if x in query],
         "dietary": [x for x in DIETARY if x in query],
-        "caffeine": (
-            "Decaf" if any(x in query for x in ["decaf", "no caffeine"])
-            else "Low Caffeine" if "low caffeine" in query
-            else None
-        ),
         "max_price": float(price_match.group(1)) if price_match else None,
         "seating": any(x in query for x in ["sit", "seating", "study", "work"]),
         "wifi": any(x in query for x in ["wifi", "wi-fi", "internet"])

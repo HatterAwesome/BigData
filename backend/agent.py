@@ -3,282 +3,323 @@ import os
 
 from intent_handler import extract_preferences, identify_intent
 
+
+# Load all restaurant JSON files
 def load_coffee_data():
-    """Loads and normalizes all shop JSON files from backend/JSON/"""
-    data = {}
-    paths_to_try = [
-        os.path.join(os.path.dirname(__file__), "JSON"),
-        "backend/JSON",
-        "JSON",
-        "./JSON"
-    ]
 
-    target_dir = None
-    for p in paths_to_try:
-        if os.path.exists(p):
-            target_dir = p
-            break
-
-    if not target_dir:
-        return {}
-
-    for filename in os.listdir(target_dir):
-        if filename.endswith(".json"):
-            shop_key = filename.replace(".json", "").lower()
-            filepath = os.path.join(target_dir, filename)
-
-            try:
-                with open(filepath, "r", encoding="utf-8") as f:
-                    data[shop_key] = json.load(f)
-            except Exception as e:
-                print(f"Error loading {filename}: {e}")
-
-    return data
-
-
-def get_menu_items(data, category_path=None, inherited_prices=None):
-    """Extracts individual menu items from nested JSON categories."""
-    if category_path is None:
-        category_path = []
-    if isinstance(data, list):
-        items = []
-        for entry in data:
-            items.extend(
-                get_menu_items(entry, category_path, inherited_prices)
-            )
-        return items
-    if not isinstance(data, dict):
-        return []
-    items = []
-
-    current_name = data.get("name")
-    current_prices = data.get("size_prices", inherited_prices)
-
-    # Identify actual menu items, not category containers
-    is_menu_item = (
-        current_name
-        and not any(key in data for key in ["items", "subcategories"])
-        and any(
-            key in data
-            for key in ["price", "prices", "price_each",
-                        "available_as", "flavors"]
-        )
-        and "size_prices" not in data
+    json_folder = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "JSON"
     )
 
-    if is_menu_item:
-        menu_item = data.copy()
-        menu_item["_category"] = " > ".join(category_path)
-        menu_item["_prices"] = current_prices
-        items.append(menu_item)
+    coffee_shops = {}
 
-    # Add category names to the search context
-    next_path = category_path
+    if not os.path.exists(json_folder):
+        print("JSON folder not found:", json_folder)
+        return coffee_shops
 
-    if current_name and not is_menu_item:
-        next_path = category_path + [current_name]
+    for filename in os.listdir(json_folder):
 
-    # Search nested JSON fields
-    for key, value in data.items():
+        if filename.endswith(".json"):
 
-        if key in ["size_prices", "price_completeness"]:
-            continue
+            file_path = os.path.join(json_folder, filename)
 
-        if isinstance(value, (dict, list)):
+            try:
+                with open(file_path, "r", encoding="utf-8") as file:
+                    data = json.load(file)
+
+                shop_name = os.path.splitext(filename)[0].lower()
+                coffee_shops[shop_name] = data
+
+            except (json.JSONDecodeError, OSError) as error:
+                print(f"Error loading {filename}: {error}")
+
+    return coffee_shops
+
+
+# Get a restaurant's location from its JSON data
+def get_restaurant_location(shop_data):
+
+    if not isinstance(shop_data, dict):
+        return ""
+
+    location = shop_data.get("location", "")
+
+    if isinstance(location, dict):
+
+        city = location.get("city", "")
+        state = location.get("state", "")
+
+        return f"{city} {state}".lower()
+
+    return str(location).lower()
+
+
+# Filter restaurants by requested location
+def filter_restaurants_by_location(shops, location):
+
+    if not location:
+        return shops
+
+    matching_shops = {}
+
+    requested_location = location.lower().strip()
+
+    for shop_name, shop_data in shops.items():
+
+        restaurant_location = get_restaurant_location(shop_data)
+
+        if requested_location in restaurant_location:
+            matching_shops[shop_name] = shop_data
+
+    return matching_shops
+
+
+# Extract menu items from restaurant data
+def get_menu_items(data, category_path=None, inherited_prices=None):
+
+    if category_path is None:
+        category_path = []
+
+    if inherited_prices is None:
+        inherited_prices = []
+
+    items = []
+
+    if isinstance(data, dict):
+
+        name = data.get("name")
+
+        if name and any(
+            key in data for key in [
+                "price", "prices", "price_each",
+                "available_as", "flavors"
+            ]
+        ) and "items" not in data and "subcategories" not in data:
+
+            item = data.copy()
+            item["_category"] = " > ".join(category_path)
+            item["_prices"] = inherited_prices
+
+            items.append(item)
+
+        for key, value in data.items():
+
+            if key in ["items", "subcategories"]:
+
+                if isinstance(value, list):
+
+                    for entry in value:
+
+                        if isinstance(entry, dict):
+
+                            new_path = category_path.copy()
+
+                            if entry.get("name"):
+                                new_path.append(entry["name"])
+
+                            items.extend(
+                                get_menu_items(
+                                    entry,
+                                    new_path,
+                                    inherited_prices
+                                )
+                            )
+
+            elif isinstance(value, (dict, list)):
+
+                items.extend(
+                    get_menu_items(
+                        value,
+                        category_path,
+                        inherited_prices
+                    )
+                )
+
+    elif isinstance(data, list):
+
+        for entry in data:
+
             items.extend(
-                get_menu_items(value, next_path, current_prices)
+                get_menu_items(
+                    entry,
+                    category_path,
+                    inherited_prices
+                )
             )
 
     return items
 
+
+# Get prices from menu items
 def get_item_prices(item):
-    """Gets all available prices for a menu item."""
 
     prices = []
 
     if isinstance(item.get("price"), (int, float)):
-        prices.append(item["price"])
+        prices.append(float(item["price"]))
 
     if isinstance(item.get("price_each"), (int, float)):
-        prices.append(item["price_each"])
+        prices.append(float(item["price_each"]))
 
-    price_data = item.get("prices") or item.get("_prices") or []
+    for price_data in item.get("prices", []):
 
-    if isinstance(price_data, list):
-        for option in price_data:
-            if isinstance(option, dict):
-                price = option.get("price")
+        if isinstance(price_data, (int, float)):
+            prices.append(float(price_data))
 
-                if isinstance(price, (int, float)):
-                    prices.append(price)
+        elif isinstance(price_data, dict):
+
+            for value in price_data.values():
+
+                if isinstance(value, (int, float)):
+                    prices.append(float(value))
+
+    for price_data in item.get("_prices", []):
+
+        if isinstance(price_data, (int, float)):
+            prices.append(float(price_data))
 
     return prices
 
-def search_and_recommend(user_query: str):
-    """Searches nested coffee shop menus and recommends matching items."""
+
+# Search and recommend menu items
+def search_and_recommend(user_query, location=None):
 
     shops = load_coffee_data()
 
     if not shops:
-        return "⚠️ Error: Could not load JSON files from backend/JSON/."
+        return "Sorry, I couldn't find any restaurant databases."
+
+    # Filter restaurants by requested location
+    if location:
+
+        shops = filter_restaurants_by_location(
+            shops,
+            location
+        )
+
+        if not shops:
+            return (
+                f"Sorry, I couldn't find any restaurants "
+                f"in {location}. Please try another location."
+            )
+
+    # Extract customer preferences
+    preferences = extract_preferences(user_query)
 
     query = user_query.lower()
 
-    intent = identify_intent(user_query)
-    preferences = extract_preferences(user_query)
-
-    # Collect all individual menu items
     all_items = []
 
+    # Search every restaurant that matches the location
     for shop_name, shop_data in shops.items():
-        if isinstance(shop_data, dict):
-            menu_items = get_menu_items(shop_data)
 
-            for item in menu_items:
-                item["_shop"] = shop_data.get(
-                    "restaurant",
-                    shop_name.replace("_", " ").title()
-                )
-                all_items.append(item)
+        restaurant_name = (
+            shop_data.get("restaurant", shop_name)
+            if isinstance(shop_data, dict)
+            else shop_name
+        )
 
-    if not all_items:
-        return "I couldn't find individual menu items in the JSON files."
+        menu_items = get_menu_items(shop_data)
 
-    # Identify meaningful search terms
-    stop_words = {
-        "what", "are", "the", "is", "a", "an", "i", "want",
-        "need", "have", "do", "you", "me", "some", "please",
-        "recommend", "suggest", "find", "show", "give",
-        "under", "below", "less", "than", "up", "to",
-        "price", "cost", "much", "with", "for", "and",
-        "or", "of", "in", "on", "at", "can", "get",
-        "coffee", "drink", "drinks", "food", "menu", "item"
-    }
+        for item in menu_items:
 
-    search_words = [
-        word.strip(".,!?$") for word in query.split()
-        if word.strip(".,!?$") not in stop_words
-        and len(word.strip(".,!?$")) > 2
-    ]
+            item["_shop"] = restaurant_name
 
-    max_price = preferences["max_price"]
-    ranked_items = []
-    for item in all_items:
+            searchable_text = " ".join([
+                str(item.get("name", "")),
+                str(item.get("description", "")),
+                str(item.get("_category", "")),
+                str(item.get("flavors", ""))
+            ]).lower()
 
-        # Build searchable text from the entire item
-        searchable_text = (
-            str(item) + " " + str(item.get("_category", ""))
-        ).lower()
-        score = 0
-        # Match customer keywords against menu information
-        for word in search_words:
-            if word in searchable_text:
+            score = 0
+
+            for word in query.split():
+
+                if len(word) > 2 and word in searchable_text:
+                    score += 1
+
+            # Apply maximum price preference
+            prices = get_item_prices(item)
+            max_price = preferences.get("max_price")
+
+            if max_price is not None:
+
+                if not prices or min(prices) > max_price:
+                    continue
+
                 score += 2
 
-        # Match customer flavors
-        for flavor in preferences["flavors"]:
-            if flavor in searchable_text:
-                score += 4
+            # Apply flavor preferences
+            for flavor in preferences.get("flavors", []):
 
-        # Match the requested price
-        prices = get_item_prices(item)
-        if max_price is not None:
-            affordable_prices = [
-                price for price in prices
-                if price <= max_price
-            ]
-            if not affordable_prices:
-                continue
-            score += 3
-        if score > 0:
-            ranked_items.append((score, item))
-    # If no specific item matched, use the price filter
-    # to find affordable options instead of asking again.
-    if not ranked_items and max_price is not None:
-        for item in all_items:
-            prices = get_item_prices(item)
-            if any(price <= max_price for price in prices):
-                ranked_items.append((1, item))
-    if not ranked_items:
-        if any(word in query for word in [
-            "study", "quiet", "wifi", "wi-fi", "seating",
-            "drive", "drive-thru", "drive thru"
-        ]):
-            return (
-                "I can search the Boston Coffee House menu, "
-                "but the current JSON does not contain information "
-                "about seating, Wi-Fi, noise levels, or drive-thru services."
-                "\n\nTry asking me about drinks, flavors, food, or prices!"
-            )
+                if flavor in searchable_text:
+                    score += 3
 
-        return (
-            "I couldn't find an exact menu match. "
-            "Here are some things you can ask me:\n\n"
-            "- Recommend a caramel drink.\n"
-            "- What coffee is under $5?\n"
-            "- Show me breakfast items under $8.\n"
-            "- What iced drinks do you have?\n"
-            "- What has vanilla flavor?"
-        )
-    # Sort by relevance
-    ranked_items.sort(key=lambda x: x[0], reverse=True)
-    # Keep the top three recommendations
-    top_items = ranked_items[:3]
-    restaurant_name = top_items[0][1]["_shop"]
-    response = (
-        f"☕ **Recommendations from {restaurant_name}**\n\n"
+            item["_score"] = score
+
+            all_items.append(item)
+
+    # Sort recommendations by relevance
+    all_items.sort(
+        key=lambda item: item["_score"],
+        reverse=True
     )
-    for score, item in top_items:
-        name = item.get("name", "Unknown Item")
-        category = item.get("_category", "")
-        prices = get_item_prices(item)
-        response += f"### {name}\n"
-        if category:
-            response += f"**Category:** {category}\n\n"
-        description = item.get("description")
-        if description:
-            response += f"**Description:** {description}\n\n"
-        flavors = item.get("flavors")
-        if flavors:
-            response += f"**Flavors:** {', '.join(flavors)}\n\n"
-        if prices:
-            price_options = (
-                item.get("prices") or item.get("_prices") or []
-            )
-            if isinstance(price_options, list) and price_options:
-                displayed = []
-                for option in price_options:
-                    if not isinstance(option, dict):
-                        continue
-                    price = option.get("price")
-                    if not isinstance(price, (int, float)):
-                        continue
-                    if max_price is None or price <= max_price:
-                        size = option.get("size", "")
-                        displayed.append(
-                            f"{size}: ${price:.2f}"
-                            if size else f"${price:.2f}"
-                        )
-                if displayed:
-                    response += (
-                        "**Prices:** " + ", ".join(displayed) + "\n\n"
-                    )
-                else:
-                    response += (
-                        f"**Price:** ${min(prices):.2f}\n\n"
-                    )
-            else:
-                affordable = [
-                    price for price in prices
-                    if max_price is None or price <= max_price
-                ]
-                if affordable:
-                    response += (
-                        f"**Price:** ${min(affordable):.2f}\n\n"
-                    )
-        elif item.get("price") is None:
+
+    # Select the best item from each restaurant first
+    recommendations = []
+    selected_restaurants = set()
+
+    for item in all_items:
+
+        restaurant = item["_shop"]
+
+        if restaurant not in selected_restaurants:
+
+            recommendations.append(item)
+            selected_restaurants.add(restaurant)
+
+        if len(recommendations) == 4:
+            break
+
+    # No matching menu items
+    if not recommendations:
+        return (
+            "I couldn't find matching menu items "
+            + (f"in {location}." if location else ".")
+        )
+
+    # Format recommendations for Streamlit
+    response = "☕ **Coffee Recommendations**\n\n"
+
+    for item in recommendations:
+
+        response += f"### {item.get('name', 'Menu Item')}\n"
+
+        response += (
+            f"**Restaurant:** {item.get('_shop', 'Unknown')}\n\n"
+        )
+
+        if item.get("_category"):
             response += (
-                "**Price:** Not listed on the supplied menu.\n\n"
+                f"**Category:** {item['_category']}\n\n"
             )
+
+        if item.get("description"):
+            response += (
+                f"**Description:** {item['description']}\n\n"
+            )
+
+        prices = get_item_prices(item)
+
+        if prices:
+            response += (
+                "**Price:** "
+                + ", ".join(f"${price:.2f}" for price in prices)
+                + "\n\n"
+            )
+
         response += "---\n\n"
+
     return response
