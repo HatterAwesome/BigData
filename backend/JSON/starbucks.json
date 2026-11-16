@@ -2,7 +2,9 @@
     "menu": {
         "title": "Menu - Starbucks",
         "price_note": "Prices are estimates in USD before tax. Drinks are priced as Grande (16 oz) where available; bottled drinks and food are priced per item/order. Starbucks prices vary by store and ordering channel, and some limited-time or less common items may not be available. Check the Starbucks app for the exact price at your store.",
-        "reference": "October 2026 U.S. menu price guide and published Orlando Starbucks delivery listings. Local in-store prices may differ."
+        "reference": "October 2026 U.S. menu price guide and published Orlando Starbucks delivery listings. Local in-store prices may differ.",
+        "location_scope": "Starbucks locations in DeLand, Florida",
+        "location_note": "The menu is a general Starbucks menu reference, not a guarantee that every listed item is available at both DeLand stores. Store-specific availability and prices may vary."
     },
     "currency": "USD",
     "sections": [
@@ -348,7 +350,7 @@
                                                     "price_type": "grande_16_oz"
                                                 },
                                                 {
-                                                    "name": "Peacan Crunch Latte",
+                                                    "name": "Pecan Crunch Latte",
                                                     "price_usd": 6.8,
                                                     "price_type": "grande_16_oz"
                                                 },
@@ -452,12 +454,12 @@
                                                                     "price_type": "grande_16_oz"
                                                                 },
                                                                 {
-                                                                    "name": "Nondiary Vanilla Sweet Cream Cold Brew",
+                                                                    "name": "Nondairy Vanilla Sweet Cream Cold Brew",
                                                                     "price_usd": 5.96,
                                                                     "price_type": "grande_16_oz"
                                                                 },
                                                                 {
-                                                                    "name": "Nondiary Salted Caramel Cream Cold Brew",
+                                                                    "name": "Nondairy Salted Caramel Cream Cold Brew",
                                                                     "price_usd": 5.92,
                                                                     "price_type": "grande_16_oz"
                                                                 },
@@ -837,7 +839,7 @@
                                                             ],
                                                             "subcategories": [
                                                                 {
-                                                                    "name": "Speciality Matcha",
+                                                                    "name": "Specialty Matcha",
                                                                     "items": [
                                                                         {
                                                                             "name": "Iced Sugar Cookie Cream Matcha",
@@ -880,7 +882,7 @@
                                                                             "name": "Protein Matcha",
                                                                             "items": [
                                                                                 {
-                                                                                    "name": "Iced Protein matcha",
+                                                                                    "name": "Iced Protein Matcha",
                                                                                     "price_usd": 7.6,
                                                                                     "price_type": "grande_16_oz"
                                                                                 },
@@ -915,7 +917,7 @@
                                                                                     "price_type": "grande_16_oz"
                                                                                 },
                                                                                 {
-                                                                                    "name": "Iced Sugar-Free Caramel Protien Matcha",
+                                                                                    "name": "Iced Sugar-Free Caramel Protein Matcha",
                                                                                     "price_usd": 6.8,
                                                                                     "price_type": "grande_16_oz"
                                                                                 },
@@ -934,7 +936,7 @@
                                                                                             "name": "Brewed Tea",
                                                                                             "items": [
                                                                                                 {
-                                                                                                    "name": "Honey Citrus Mint tea",
+                                                                                                    "name": "Honey Citrus Mint Tea",
                                                                                                     "price_usd": 5.39,
                                                                                                     "price_type": "grande_16_oz"
                                                                                                 },
@@ -1018,7 +1020,7 @@
                                                                                                                             "price_type": "grande_16_oz"
                                                                                                                         },
                                                                                                                         {
-                                                                                                                            "name": "Iced Passion Tango tea Lemonade",
+                                                                                                                            "name": "Iced Passion Tango Tea Lemonade",
                                                                                                                             "price_usd": 5.39,
                                                                                                                             "price_type": "grande_16_oz"
                                                                                                                         }
@@ -1331,7 +1333,7 @@
                                     "price_type": "grande_16_oz"
                                 },
                                 {
-                                    "name" : "Caramel Ribbon Crunch Frappuccino Blended Beverage",
+                                    "name": "Caramel Ribbon Crunch Frappuccino Blended Beverage",
                                     "price_usd": 7.02,
                                     "price_type": "grande_16_oz"
                                 }
@@ -1418,7 +1420,7 @@
             "items": [],
             "subcategories": [
                 {
-                    "name": "Water& Sparkling",
+                    "name": "Water & Sparkling",
                     "items": [
                         {
                             "name": "Ethos Water",
@@ -1471,7 +1473,7 @@
                                             "price_type": "per_item_or_order"
                                         },
                                         {
-                                            "name": "Sol-ti TUMERIC SuperShot",
+                                            "name": "Sol-ti Turmeric SuperShot",
                                             "price_usd": 6.5,
                                             "price_type": "per_item_or_order"
                                         },
@@ -1610,7 +1612,7 @@
                                             "price_type": "per_item_or_order"
                                         },
                                         {
-                                            "name": "Avacado Spread",
+                                            "name": "Avocado Spread",
                                             "price_usd": 1.45,
                                             "price_type": "per_item_or_order"
                                         }
@@ -1620,7 +1622,7 @@
                                             "name": "Egg Bites & Bakes",
                                             "items": [
                                                 {
-                                                    "name": "Bacon & GruyÃ¨re Egg Bites",
+                                                    "name": "Bacon & Gruyère Egg Bites",
                                                     "price_usd": 5.99,
                                                     "price_type": "per_item_or_order"
                                                 },
@@ -1675,7 +1677,7 @@
                                                             "price_type": "per_item_or_order"
                                                         },
                                                         {
-                                                            "name": "Mush Chocolate Peanut Butter Protein Overnight Oats",
+                                                            "name": "MUSH Chocolate Peanut Butter Protein Overnight Oats",
                                                             "price_usd": 4.25,
                                                             "price_type": "per_item_or_order"
                                                         },
@@ -1764,7 +1766,7 @@
                                                                                     "name": "Loaves, Muffins & Cakes",
                                                                                     "items": [
                                                                                         {
-                                                                                            "name": "Pumkin Cream Cheese Muffin",
+                                                                                            "name": "Pumpkin Cream Cheese Muffin",
                                                                                             "price_usd": 4.95,
                                                                                             "price_type": "per_item_or_order"
                                                                                         },
@@ -1784,7 +1786,7 @@
                                                                                             "price_type": "per_item_or_order"
                                                                                         },
                                                                                         {
-                                                                                            "name": "Pumpkin & Peptia Loaf",
+                                                                                            "name": "Pumpkin & Pepita Loaf",
                                                                                             "price_usd": 4.95,
                                                                                             "price_type": "per_item_or_order"
                                                                                         },
@@ -1799,7 +1801,7 @@
                                                                                             "price_type": "per_item_or_order"
                                                                                         },
                                                                                         {
-                                                                                            "name": "Petitie Vanilla Bean Scone",
+                                                                                            "name": "Petite Vanilla Bean Scone",
                                                                                             "price_usd": 2.65,
                                                                                             "price_type": "per_item_or_order"
                                                                                         }
@@ -1868,7 +1870,7 @@
                                                                                                                             "price_type": "per_item_or_order"
                                                                                                                         },
                                                                                                                         {
-                                                                                                                            "name": "Couble Chocolate Brownie",
+                                                                                                                            "name": "Double Chocolate Brownie",
                                                                                                                             "price_usd": 4.63,
                                                                                                                             "price_type": "per_item_or_order"
                                                                                                                         },
@@ -1942,7 +1944,7 @@
                                                                                                                                                     "price_type": "per_item_or_order"
                                                                                                                                                 },
                                                                                                                                                 {
-                                                                                                                                                    "name": "JalapeÃ±o Chicken Pocket",
+                                                                                                                                                    "name": "Jalapeño Chicken Pocket",
                                                                                                                                                     "price_usd": 6.5,
                                                                                                                                                     "price_type": "per_item_or_order"
                                                                                                                                                 },
@@ -2006,7 +2008,7 @@
                                                                                                                                                                                     "price_type": "per_item_or_order"
                                                                                                                                                                                 },
                                                                                                                                                                                 {
-                                                                                                                                                                                    "name": "JalapeÃ±o Chicken Pocket",
+                                                                                                                                                                                    "name": "Jalapeño Chicken Pocket",
                                                                                                                                                                                     "price_usd": 6.5,
                                                                                                                                                                                     "price_type": "per_item_or_order"
                                                                                                                                                                                 },
@@ -2079,19 +2081,24 @@
                                                                                                                                                                                             "subcategories": [
                                                                                                                                                                                                 {
                                                                                                                                                                                                     "name": "Protein Popcorn",
-                                                                                                                                                                                                    "items": [{
+                                                                                                                                                                                                    "items": [
+                                                                                                                                                                                                        {
                                                                                                                                                                                                             "name": "Khloud White Cheddar Protein Popcorn",
                                                                                                                                                                                                             "price_usd": 3.5,
-                                                                                                                                                                                                            "price_type": "per_item_or_order"},{
+                                                                                                                                                                                                            "price_type": "per_item_or_order"
+                                                                                                                                                                                                        },
+                                                                                                                                                                                                        {
                                                                                                                                                                                                             "name": "Khloud Sweet & Salty Kettle Corn Protein Popcorn",
                                                                                                                                                                                                             "price_usd": 3.5,
-                                                                                                                                                                                                            "price_type": "per_item_or_order"}
+                                                                                                                                                                                                            "price_type": "per_item_or_order"
+                                                                                                                                                                                                        }
                                                                                                                                                                                                     ],
-                                                                                                                                                                                                    "subcategories": [{
+                                                                                                                                                                                                    "subcategories": [
+                                                                                                                                                                                                        {
                                                                                                                                                                                                             "name": "Sweet Snacks",
                                                                                                                                                                                                             "items": [
                                                                                                                                                                                                                 {
-                                                                                                                                                                                                                    "name": "Madeleins",
+                                                                                                                                                                                                                    "name": "Madeleines",
                                                                                                                                                                                                                     "price_usd": 2.49,
                                                                                                                                                                                                                     "price_type": "per_item_or_order"
                                                                                                                                                                                                                 },
@@ -2145,7 +2152,8 @@
                                                                                                                                                                                                                         }
                                                                                                                                                                                                                     ]
                                                                                                                                                                                                                 }
-                                                                                                                                                                                                            ]}
+                                                                                                                                                                                                            ]
+                                                                                                                                                                                                        }
                                                                                                                                                                                                     ]
                                                                                                                                                                                                 }
                                                                                                                                                                                             ]
@@ -2194,5 +2202,41 @@
                 }
             ]
         }
-    ]
+    ],
+    "locations": {
+        "city": "DeLand",
+        "state": "Florida",
+        "country": "United States",
+        "description": "This menu is associated with Starbucks locations in DeLand, Florida. Store amenities, hours, and item availability can vary by location.",
+        "stores": [
+            {
+                "name": "Starbucks - East International Speedway Boulevard",
+                "address": "210 E International Speedway Blvd, DeLand, FL 32724, USA",
+                "phone": "+1-386-277-4657",
+                "drive_thru": true,
+                "indoor_seating": true,
+                "wifi": null,
+                "study_friendly": true,
+                "study_description": "A newer, stand-alone Starbucks with indoor seating. It can work for studying, laptop use, or a coffee break, although traffic and noise levels may vary. Wi-Fi availability was not independently confirmed.",
+                "quick_grab_and_go": true,
+                "quick_grab_and_go_description": "A convenient stop for mobile or counter pickup, coffee, breakfast sandwiches, wraps, egg bites, pastries, and other ready-to-go items.",
+                "location_description": "A stand-alone Starbucks on East International Speedway Boulevard near North Amelia Avenue and nearby retail businesses. The location offers both a café visit and drive-thru convenience.",
+                "source_notes": "Address, phone, and general hours were cross-checked against local business listings. Drive-thru is supported by a commercial property listing for this Starbucks site. Seating is described in local business information; Wi-Fi was not confirmed."
+            },
+            {
+                "name": "Starbucks - South Woodland Boulevard (US 17-92 & Orange Camp Road)",
+                "address": "2417 S Woodland Blvd, DeLand, FL 32720, USA",
+                "phone": "+1-386-956-1970",
+                "drive_thru": true,
+                "indoor_seating": true,
+                "wifi": true,
+                "study_friendly": true,
+                "study_description": "A café-style location with indoor seating and reported Wi-Fi, making it a reasonable option for studying or working on a laptop. It is on a busy commercial road, so it may be less quiet during peak periods.",
+                "quick_grab_and_go": true,
+                "quick_grab_and_go_description": "Useful for a quick coffee or breakfast stop, with drive-thru service and Starbucks grab-and-go choices such as pastries, egg bites, breakfast sandwiches, wraps, and bottled drinks.",
+                "location_description": "Located on South Woodland Boulevard near the US 17-92 and Orange Camp Road area in DeLand. This is an established Starbucks café serving commuters, nearby residents, and customers looking for either a quick stop or a place to sit.",
+                "source_notes": "Address and phone are supported by local store listings. A local store listing identifies drive-thru service, and a local venue directory lists Wi-Fi and seating amenities. Confirm current amenities and hours with the store before visiting."
+            }
+        ]
+    }
 }

@@ -1,6 +1,5 @@
-
-# Connect the existing backend files
 from agent import search_and_recommend
+
 from intent_handler import (
     identify_intent,
     extract_preferences,
@@ -11,8 +10,8 @@ from intent_handler import (
 
 def get_chatbot_response(user_query):
     """
-    Processes the customer's message using the intent handler
-    and generates a coffee shop recommendation using the agent.
+    Processes the customer's message and generates
+    a coffee shop recommendation.
     """
 
     # Step 1: Understand what the customer is asking
@@ -27,7 +26,7 @@ def get_chatbot_response(user_query):
     # Step 4: Identify the requested location
     location = extract_location(user_query)
 
-    # Step 5: Get recommendations from the agent
+    # Step 5: Search restaurant menus
     recommendation = search_and_recommend(
         user_query,
         location=location
