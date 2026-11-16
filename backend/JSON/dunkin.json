@@ -1,862 +1,2247 @@
 {
     "restaurant": "Dunkin'",
     "currency": "USD",
+    "last_updated": "2026-11-16",
     "price_basis": {
         "drinks": "Medium size for made-to-order drinks; one bottle for bottled drinks.",
         "food": "One typical serving/order unless a count or package is specified.",
         "note": "Prices are approximate estimates as of November 2026 and vary by location."
     },
+    "restaurant_info": {
+        "category": "Quick-service coffee & donut chain",
+        "data_confidence": "General chain-wide expectations. Details marked 'varies_by_location' should be confirmed for a specific store.",
+        "drive_thru": {
+            "available": "at_most_locations",
+            "varies_by_location": true,
+            "note": "Drive-thru is a core part of the Dunkin' model; walk-up/urban and some inside-venue stores (airports, campuses, gas stations) may have none."
+        },
+        "seating": {
+            "indoor": {
+                "available": "varies_by_location",
+                "typical": "Limited or small seating at many stores; some newer builds are drive-thru focused with minimal or no dining room."
+            },
+            "outdoor": {
+                "available": "varies_by_location",
+                "typical": "Uncommon; patio seating appears at only some locations, mostly suburban."
+            }
+        },
+        "service_style": {
+            "counter_service": true,
+            "table_service": false,
+            "order_at_counter_or_kiosk": true,
+            "mobile_order_ahead": true,
+            "mobile_pickup_shelf_or_window": "varies_by_location",
+            "delivery": "via third-party apps such as DoorDash, Uber Eats and Grubhub (varies by location)"
+        },
+        "quick_grab_and_go": {
+            "suitable": true,
+            "typical_wait_minutes": "2-6 (longer at morning rush)",
+            "best_for": [
+                "coffee run",
+                "breakfast on the way to work",
+                "donut box for the office"
+            ]
+        },
+        "study_or_work_spot": {
+            "suitable": "limited",
+            "rating_out_of_5": 2,
+            "reasoning": "Fast-turnover stores with small seating areas and a steady stream of drive-thru traffic; better for a quick email session than a long study block.",
+            "tips": [
+                "Off-peak hours (mid-morning to early afternoon) are quieter",
+                "Check for outlets and Wi-Fi before settling in",
+                "Bring headphones - noise from the drive-thru and equipment is common"
+            ]
+        },
+        "wifi": {
+            "available": "varies_by_location",
+            "note": "Offered at many dine-in stores; often absent at drive-thru-only or kiosk-style stores."
+        },
+        "power_outlets": "varies_by_location",
+        "restrooms": "varies_by_location (often customer-accessible at stand-alone dine-in stores; limited in some venues)",
+        "noise_level": "moderate_to_busy",
+        "ambiance": "casual, functional, high-turnover",
+        "typical_hours": {
+            "open_early": true,
+            "typical_open": "around 5:00 AM",
+            "typical_close": "evening, roughly 8-10 PM; some locations open 24 hours",
+            "varies_by_location": true
+        },
+        "payment": {
+            "cards": true,
+            "cash": true,
+            "mobile_wallets": true,
+            "dunkin_app": true
+        },
+        "loyalty_program": {
+            "name": "Dunkin' Rewards",
+            "earn": "points on purchases",
+            "note": "App ordering ties into the rewards program."
+        },
+        "accessibility": {
+            "wheelchair_accessible": "most_locations",
+            "note": "Confirm with your local store."
+        },
+        "dietary_notes": {
+            "vegetarian_options": true,
+            "vegan_options": "limited (some drinks, plain bagels, toast, with non-dairy milk alternatives)",
+            "non_dairy_milk_options": [
+                "oat milk",
+                "almond milk",
+                "coconut milk (availability varies)"
+            ],
+            "allergen_note": "Shared equipment across items. Check the official allergen guide if you have a food allergy."
+        },
+        "family_friendly": true,
+        "pet_friendly_outdoor": "varies_by_location",
+        "best_time_to_visit": {
+            "avoid_rush": "weekday 7-9 AM",
+            "quieter": "mid-morning and mid-afternoon"
+        },
+        "best_for": [
+            "quick coffee",
+            "breakfast on the go",
+            "donuts for groups",
+            "drive-thru convenience"
+        ],
+        "not_ideal_for": [
+            "long study sessions",
+            "formal sit-down meals",
+            "large group meetups"
+        ]
+    },
+    "corrections_log": [
+        "Fixed garbled characters: 'Â®' -> '®', 'â„¢' -> '™', and removed a hidden zero-width space in 'Blue Raspberry Coolatta®'.",
+        "Fixed spelling: 'Speciality' -> 'Specialty' in the category name 'Iced Refreshers, Specialty & Tea'.",
+        "Removed stray spaces: 'Pepsi ® Zero Sugar' -> 'Pepsi® Zero Sugar', 'Mountain Dew ®' -> 'Mountain Dew®', 'Naked®  Smoothie' -> 'Naked® Smoothie'.",
+        "Removed duplicate entries within the same category (Iced Tea listed twice; Stuffed Bagel Minis listed three times in Savory Bites). Items repeated across different categories are kept and share an 'item_key'.",
+        "Re-labelled the subcategory of muffins, bagels, bagel minis, croissants and English muffins from 'Donuts' to 'Bakery'."
+    ],
     "sections": [
         {
             "category": "Featured Deals",
+            "item_count": 1,
             "items": [
                 {
+                    "id": "featured-deals__6-meal-deal",
+                    "item_key": "6-meal-deal",
                     "name": "$6 Meal Deal",
-                    "price_usd": 6.0
+                    "price_usd": 6.0,
+                    "item_type": "bundle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true
                 }
             ]
         },
         {
             "category": "Iced Coffee, Cold Brew & Espresso",
+            "item_count": 15,
             "items": [
                 {
+                    "id": "iced-coffee-cold-brew-espresso__original-blend-iced-coffee",
+                    "item_key": "original-blend-iced-coffee",
                     "name": "Original Blend Iced Coffee",
                     "price_usd": 3.49,
-                    "subcategory": "Coffee"
+                    "subcategory": "Coffee",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__cold-brew",
+                    "item_key": "cold-brew",
                     "name": "Cold Brew",
                     "price_usd": 4.29,
-                    "subcategory": "Cold Brew"
+                    "subcategory": "Cold Brew",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__cold-brew-with-cold-foam",
+                    "item_key": "cold-brew-with-cold-foam",
                     "name": "Cold Brew with Cold Foam",
                     "price_usd": 5.29,
-                    "subcategory": "Cold Brew"
+                    "subcategory": "Cold Brew",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__brown-sugar-shakin-espresso",
+                    "item_key": "brown-sugar-shakin-espresso",
                     "name": "Brown Sugar Shakin' Espresso",
                     "price_usd": 4.99,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__shakin-espresso",
+                    "item_key": "shakin-espresso",
                     "name": "Shakin' Espresso",
                     "price_usd": 4.79,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__iced-latte",
+                    "item_key": "iced-latte",
                     "name": "Iced Latte",
                     "price_usd": 4.79,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__iced-dunkalatte",
+                    "item_key": "iced-dunkalatte",
                     "name": "Iced Dunkalatte",
                     "price_usd": 5.29,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__make-your-own-cloud-latte",
+                    "item_key": "make-your-own-cloud-latte",
                     "name": "Make Your Own Cloud Latte",
                     "price_usd": 5.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__pumpkin-spice-iced-signature-latte",
+                    "item_key": "pumpkin-spice-iced-signature-latte",
                     "name": "Pumpkin Spice Iced Signature Latte",
                     "price_usd": 5.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__toasted-white-chocolate-iced-signature-latte",
+                    "item_key": "toasted-white-chocolate-iced-signature-latte",
                     "name": "Toasted White Chocolate Iced Signature Latte",
                     "price_usd": 5.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__caramel-craze-iced-signature-latte",
+                    "item_key": "caramel-craze-iced-signature-latte",
                     "name": "Caramel Craze Iced Signature Latte",
                     "price_usd": 5.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__cocoa-mocha-iced-signature-latte",
+                    "item_key": "cocoa-mocha-iced-signature-latte",
                     "name": "Cocoa Mocha Iced Signature Latte",
                     "price_usd": 5.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__iced-cappuccino",
+                    "item_key": "iced-cappuccino",
                     "name": "Iced Cappuccino",
                     "price_usd": 4.79,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__iced-macchiato",
+                    "item_key": "iced-macchiato",
                     "name": "Iced Macchiato",
                     "price_usd": 5.09,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-coffee-cold-brew-espresso__iced-americano",
+                    "item_key": "iced-americano",
                     "name": "Iced Americano",
                     "price_usd": 3.79,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 }
             ]
         },
         {
-            "category": "Iced Refreshers, Speciality & Tea",
+            "category": "Iced Refreshers, Specialty & Tea",
+            "item_count": 11,
             "items": [
                 {
+                    "id": "iced-refreshers-specialty-tea__dunkin-refreshers",
+                    "item_key": "dunkin-refreshers",
                     "name": "Dunkin' Refreshers",
                     "price_usd": 4.49,
-                    "subcategory": "Refreshers"
+                    "subcategory": "Refreshers",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-refreshers-specialty-tea__dunkin-lemonade-refreshers",
+                    "item_key": "dunkin-lemonade-refreshers",
                     "name": "Dunkin' Lemonade Refreshers",
                     "price_usd": 4.79,
-                    "subcategory": "Refreshers"
+                    "subcategory": "Refreshers",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-refreshers-specialty-tea__daydream-refreshers",
+                    "item_key": "daydream-refreshers",
                     "name": "Daydream Refreshers",
                     "price_usd": 4.79,
-                    "subcategory": "Refreshers"
+                    "subcategory": "Refreshers",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-refreshers-specialty-tea__dunkin-sparkling-refreshers",
+                    "item_key": "dunkin-sparkling-refreshers",
                     "name": "Dunkin' Sparkling Refreshers",
                     "price_usd": 4.79,
-                    "subcategory": "Refreshers"
+                    "subcategory": "Refreshers",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-refreshers-specialty-tea__light-dunkin-refreshers",
+                    "item_key": "light-dunkin-refreshers",
                     "name": "Light Dunkin' Refreshers",
                     "price_usd": 4.49,
-                    "subcategory": "Refreshers"
+                    "subcategory": "Refreshers",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-refreshers-specialty-tea__mix-your-own-refresher",
+                    "item_key": "mix-your-own-refresher",
                     "name": "Mix Your Own Refresher",
                     "price_usd": 4.79,
-                    "subcategory": "Refreshers"
+                    "subcategory": "Refreshers",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-refreshers-specialty-tea__dunkin-zero",
+                    "item_key": "dunkin-zero",
                     "name": "Dunkin' Zero",
                     "price_usd": 3.49,
-                    "subcategory": "Specialty"
+                    "subcategory": "Specialty",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-refreshers-specialty-tea__lemonade",
+                    "item_key": "lemonade",
                     "name": "Lemonade",
                     "price_usd": 3.49,
-                    "subcategory": "Specialty"
+                    "subcategory": "Specialty",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "iced-refreshers-specialty-tea__iced-tea",
+                    "item_key": "iced-tea",
                     "name": "Iced Tea",
                     "price_usd": 2.99,
-                    "subcategory": "Specialty"
+                    "subcategory": "Tea",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Iced Tea",
-                    "price_usd": 2.99,
-                    "subcategory": "Tea"
-                },
-                {
+                    "id": "iced-refreshers-specialty-tea__iced-matcha-latte",
+                    "item_key": "iced-matcha-latte",
                     "name": "Iced Matcha Latte",
                     "price_usd": 5.09,
-                    "subcategory": "Tea"
+                    "subcategory": "Tea",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "iced-refreshers-specialty-tea__iced-chai-latte",
+                    "item_key": "iced-chai-latte",
                     "name": "Iced Chai Latte",
                     "price_usd": 4.79,
-                    "subcategory": "Tea"
+                    "subcategory": "Tea",
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 }
             ]
         },
         {
             "category": "Hot Drinks",
+            "item_count": 18,
             "items": [
                 {
+                    "id": "hot-drinks__original-blend",
+                    "item_key": "original-blend",
                     "name": "Original Blend",
                     "price_usd": 2.99,
-                    "subcategory": "Coffee"
+                    "subcategory": "Coffee",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__dunkin-midnight",
+                    "item_key": "dunkin-midnight",
                     "name": "Dunkin' Midnight",
                     "price_usd": 2.99,
-                    "subcategory": "Coffee"
+                    "subcategory": "Coffee",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Box O' JoeÂ® Coffee",
+                    "id": "hot-drinks__box-o-joe-coffee",
+                    "item_key": "box-o-joe-coffee",
+                    "name": "Box O' Joe® Coffee",
                     "price_usd": 22.99,
-                    "subcategory": "Coffee"
+                    "subcategory": "Coffee",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": false,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__latte",
+                    "item_key": "latte",
                     "name": "Latte",
                     "price_usd": 4.79,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Dunkalatteâ„¢",
+                    "id": "hot-drinks__dunkalatte",
+                    "item_key": "dunkalatte",
+                    "name": "Dunkalatte™",
                     "price_usd": 5.29,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__pumpkin-spice-signature-latte",
+                    "item_key": "pumpkin-spice-signature-latte",
                     "name": "Pumpkin Spice Signature Latte",
                     "price_usd": 5.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__toasted-white-chocolate-signature-latte",
+                    "item_key": "toasted-white-chocolate-signature-latte",
                     "name": "Toasted White Chocolate Signature Latte",
                     "price_usd": 5.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__caramel-craze-signature-latte",
+                    "item_key": "caramel-craze-signature-latte",
                     "name": "Caramel Craze Signature Latte",
                     "price_usd": 5.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__cocoa-mocha-signature-latte",
+                    "item_key": "cocoa-mocha-signature-latte",
                     "name": "Cocoa Mocha Signature Latte",
                     "price_usd": 5.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__cappuccino",
+                    "item_key": "cappuccino",
                     "name": "Cappuccino",
                     "price_usd": 4.79,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__macchiato",
+                    "item_key": "macchiato",
                     "name": "Macchiato",
                     "price_usd": 5.09,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__americano",
+                    "item_key": "americano",
                     "name": "Americano",
                     "price_usd": 3.79,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__espresso",
+                    "item_key": "espresso",
                     "name": "Espresso",
                     "price_usd": 2.49,
-                    "subcategory": "Espresso"
+                    "subcategory": "Espresso",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__tea",
+                    "item_key": "tea",
                     "name": "Tea",
                     "price_usd": 2.79,
-                    "subcategory": "Specialty & Tea"
+                    "subcategory": "Specialty & Tea",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__matcha-latte",
+                    "item_key": "matcha-latte",
                     "name": "Matcha Latte",
                     "price_usd": 5.09,
-                    "subcategory": "Specialty & Tea"
+                    "subcategory": "Specialty & Tea",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__chai-latte",
+                    "item_key": "chai-latte",
                     "name": "Chai Latte",
                     "price_usd": 4.79,
-                    "subcategory": "Specialty & Tea"
+                    "subcategory": "Specialty & Tea",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "hot-drinks__hot-chocolate",
+                    "item_key": "hot-chocolate",
                     "name": "Hot Chocolate",
                     "price_usd": 3.49,
-                    "subcategory": "Hot Chocolate & More"
+                    "subcategory": "Hot Chocolate & More",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "Box O' JoeÂ® Hot Chocolate",
+                    "id": "hot-drinks__box-o-joe-hot-chocolate",
+                    "item_key": "box-o-joe-hot-chocolate",
+                    "name": "Box O' Joe® Hot Chocolate",
                     "price_usd": 22.99,
-                    "subcategory": "Hot Chocolate & More"
+                    "subcategory": "Hot Chocolate & More",
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": false,
+                    "likely_contains_caffeine": false
                 }
             ]
         },
         {
             "category": "Frozen Drinks",
+            "item_count": 8,
             "items": [
                 {
+                    "id": "frozen-drinks__coffee-chiller",
+                    "item_key": "coffee-chiller",
                     "name": "Coffee Chiller",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "frozen",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "frozen-drinks__caramel-creme-coffee-chiller",
+                    "item_key": "caramel-creme-coffee-chiller",
                     "name": "Caramel Creme Coffee Chiller",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "frozen",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "frozen-drinks__triple-mocha-coffee-chiller",
+                    "item_key": "triple-mocha-coffee-chiller",
                     "name": "Triple Mocha Coffee Chiller",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "frozen",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "frozen-drinks__frozen-matcha-latte",
+                    "item_key": "frozen-matcha-latte",
                     "name": "Frozen Matcha Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "frozen",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "frozen-drinks__frozen-chocolate",
+                    "item_key": "frozen-chocolate",
                     "name": "Frozen Chocolate",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "frozen",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "Strawberry CoolattaÂ®",
-                    "price_usd": 5.09
+                    "id": "frozen-drinks__strawberry-coolatta",
+                    "item_key": "strawberry-coolatta",
+                    "name": "Strawberry Coolatta®",
+                    "price_usd": 5.09,
+                    "item_type": "drink",
+                    "temperature": "frozen",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "Vanilla Bean CoolattaÂ®",
-                    "price_usd": 5.09
+                    "id": "frozen-drinks__vanilla-bean-coolatta",
+                    "item_key": "vanilla-bean-coolatta",
+                    "name": "Vanilla Bean Coolatta®",
+                    "price_usd": 5.09,
+                    "item_type": "drink",
+                    "temperature": "frozen",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "Blue Raspberry Coolattaâ€‹Â®",
-                    "price_usd": 5.09
+                    "id": "frozen-drinks__blue-raspberry-coolatta",
+                    "item_key": "blue-raspberry-coolatta",
+                    "name": "Blue Raspberry Coolatta®",
+                    "price_usd": 5.09,
+                    "item_type": "drink",
+                    "temperature": "frozen",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 }
             ]
         },
         {
             "category": "Sandwiches & Wraps",
+            "item_count": 12,
             "items": [
                 {
+                    "id": "sandwiches-wraps__grilled-cheese",
+                    "item_key": "grilled-cheese",
                     "name": "Grilled Cheese",
                     "price_usd": 5.49,
-                    "subcategory": "Signature Sandwiches"
+                    "subcategory": "Signature Sandwiches",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
+                    "id": "sandwiches-wraps__maple-sugar-bacon-breakfast-sandwich",
+                    "item_key": "maple-sugar-bacon-breakfast-sandwich",
                     "name": "Maple Sugar Bacon Breakfast Sandwich",
                     "price_usd": 5.99,
-                    "subcategory": "Signature Sandwiches"
+                    "subcategory": "Signature Sandwiches",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
+                    "id": "sandwiches-wraps__sourdough-breakfast-sandwich",
+                    "item_key": "sourdough-breakfast-sandwich",
                     "name": "Sourdough Breakfast Sandwich",
                     "price_usd": 6.49,
-                    "subcategory": "Signature Sandwiches"
+                    "subcategory": "Signature Sandwiches",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
+                    "id": "sandwiches-wraps__bacon-egg-and-cheese",
+                    "item_key": "bacon-egg-and-cheese",
                     "name": "Bacon, Egg and Cheese",
                     "price_usd": 5.49,
-                    "subcategory": "Breakfast Sandwiches"
+                    "subcategory": "Breakfast Sandwiches",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
+                    "id": "sandwiches-wraps__sausage-egg-and-cheese",
+                    "item_key": "sausage-egg-and-cheese",
                     "name": "Sausage, Egg and Cheese",
                     "price_usd": 5.49,
-                    "subcategory": "Breakfast Sandwiches"
+                    "subcategory": "Breakfast Sandwiches",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
+                    "id": "sandwiches-wraps__egg-and-cheese",
+                    "item_key": "egg-and-cheese",
                     "name": "Egg and Cheese",
                     "price_usd": 4.49,
-                    "subcategory": "Breakfast Sandwiches"
+                    "subcategory": "Breakfast Sandwiches",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
+                    "id": "sandwiches-wraps__turkey-sausage-egg-and-cheese",
+                    "item_key": "turkey-sausage-egg-and-cheese",
                     "name": "Turkey Sausage, Egg and Cheese",
                     "price_usd": 5.49,
-                    "subcategory": "Breakfast Sandwiches"
+                    "subcategory": "Breakfast Sandwiches",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
-                    "name": "Wake-Up WrapÂ® - Bacon, Egg and Cheese",
+                    "id": "sandwiches-wraps__wake-up-wrap-bacon-egg-and-cheese",
+                    "item_key": "wake-up-wrap-bacon-egg-and-cheese",
+                    "name": "Wake-Up Wrap® - Bacon, Egg and Cheese",
                     "price_usd": 3.49,
-                    "subcategory": "Wake-Up Wraps"
+                    "subcategory": "Wake-Up Wraps",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
-                    "name": "Wake-Up WrapÂ® - Maple Sugar Bacon",
+                    "id": "sandwiches-wraps__wake-up-wrap-maple-sugar-bacon",
+                    "item_key": "wake-up-wrap-maple-sugar-bacon",
+                    "name": "Wake-Up Wrap® - Maple Sugar Bacon",
                     "price_usd": 3.49,
-                    "subcategory": "Wake-Up Wraps"
+                    "subcategory": "Wake-Up Wraps",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
-                    "name": "Wake-Up WrapÂ® - Sausage, Egg and Cheese",
+                    "id": "sandwiches-wraps__wake-up-wrap-sausage-egg-and-cheese",
+                    "item_key": "wake-up-wrap-sausage-egg-and-cheese",
+                    "name": "Wake-Up Wrap® - Sausage, Egg and Cheese",
                     "price_usd": 3.49,
-                    "subcategory": "Wake-Up Wraps"
+                    "subcategory": "Wake-Up Wraps",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
-                    "name": "Wake-Up WrapÂ® - Turkey Sausage, Egg and Cheese",
+                    "id": "sandwiches-wraps__wake-up-wrap-turkey-sausage-egg-and-cheese",
+                    "item_key": "wake-up-wrap-turkey-sausage-egg-and-cheese",
+                    "name": "Wake-Up Wrap® - Turkey Sausage, Egg and Cheese",
                     "price_usd": 3.49,
-                    "subcategory": "Wake-Up Wraps"
+                    "subcategory": "Wake-Up Wraps",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 },
                 {
-                    "name": "Wake-Up WrapÂ® - Egg and Cheese",
+                    "id": "sandwiches-wraps__wake-up-wrap-egg-and-cheese",
+                    "item_key": "wake-up-wrap-egg-and-cheese",
+                    "name": "Wake-Up Wrap® - Egg and Cheese",
                     "price_usd": 2.99,
-                    "subcategory": "Wake-Up Wraps"
+                    "subcategory": "Wake-Up Wraps",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "breakfast_and_all_day"
                 }
             ]
         },
         {
             "category": "Donuts, Bagels & Bakery",
+            "item_count": 16,
             "items": [
                 {
-                    "name": "25 Ct. Doom MUNCHKINSÂ® Donut Hole Treats Tin",
+                    "id": "donuts-bagels-bakery__25-ct-doom-munchkins-donut-hole-treats-tin",
+                    "item_key": "25-ct-doom-munchkins-donut-hole-treats-tin",
+                    "name": "25 Ct. Doom MUNCHKINS® Donut Hole Treats Tin",
                     "price_usd": 11.99,
-                    "subcategory": "Donuts"
+                    "subcategory": "Donuts",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": false,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__doomsday-donut",
+                    "item_key": "doomsday-donut",
                     "name": "Doomsday Donut",
                     "price_usd": 2.49,
-                    "subcategory": "Donuts"
+                    "subcategory": "Donuts",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
-                    "name": "Doomsday MUNCHKINSÂ® Donut Hole Treats",
+                    "id": "donuts-bagels-bakery__doomsday-munchkins-donut-hole-treats",
+                    "item_key": "doomsday-munchkins-donut-hole-treats",
+                    "name": "Doomsday MUNCHKINS® Donut Hole Treats",
                     "price_usd": 4.99,
-                    "subcategory": "Donuts"
+                    "subcategory": "Donuts",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__avenging-donut",
+                    "item_key": "avenging-donut",
                     "name": "Avenging Donut",
                     "price_usd": 2.49,
-                    "subcategory": "Donuts"
+                    "subcategory": "Donuts",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
-                    "name": "Avenging MUNCHKINSÂ® Donut Hole Treats",
+                    "id": "donuts-bagels-bakery__avenging-munchkins-donut-hole-treats",
+                    "item_key": "avenging-munchkins-donut-hole-treats",
+                    "name": "Avenging MUNCHKINS® Donut Hole Treats",
                     "price_usd": 4.99,
-                    "subcategory": "Donuts"
+                    "subcategory": "Donuts",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__classic-donuts",
+                    "item_key": "classic-donuts",
                     "name": "Classic Donuts",
                     "price_usd": 1.99,
+                    "subcategory": "Donuts",
                     "serving": "each",
-                    "subcategory": "Donuts"
+                    "item_type": "food",
+                    "size_basis": "each",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
-                    "name": "MUNCHKINSÂ® Donut Hole Treats",
+                    "id": "donuts-bagels-bakery__munchkins-donut-hole-treats",
+                    "item_key": "munchkins-donut-hole-treats",
+                    "name": "MUNCHKINS® Donut Hole Treats",
                     "price_usd": 4.99,
+                    "subcategory": "Donuts",
                     "serving": "10-count",
-                    "subcategory": "Donuts"
+                    "item_type": "food",
+                    "size_basis": "10-count",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__half-dozen-donuts",
+                    "item_key": "half-dozen-donuts",
                     "name": "Half Dozen Donuts",
                     "price_usd": 10.99,
-                    "subcategory": "Donuts"
+                    "subcategory": "Donuts",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": false,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__dozen-donuts",
+                    "item_key": "dozen-donuts",
                     "name": "Dozen Donuts",
                     "price_usd": 19.99,
-                    "subcategory": "Donuts"
+                    "subcategory": "Donuts",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": false,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__muffins",
+                    "item_key": "muffins",
                     "name": "Muffins",
                     "price_usd": 3.49,
+                    "subcategory": "Bakery",
                     "serving": "each",
-                    "subcategory": "Donuts"
+                    "item_type": "food",
+                    "size_basis": "each",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__plain-stuffed-bagel-minis",
+                    "item_key": "plain-stuffed-bagel-minis",
                     "name": "Plain Stuffed Bagel Minis",
                     "price_usd": 3.49,
+                    "subcategory": "Bakery",
                     "serving": "2-count",
-                    "subcategory": "Donuts"
+                    "item_type": "food",
+                    "size_basis": "2-count",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__everything-stuffed-bagel-minis",
+                    "item_key": "everything-stuffed-bagel-minis",
                     "name": "Everything Stuffed Bagel Minis",
                     "price_usd": 3.49,
+                    "subcategory": "Bakery",
                     "serving": "2-count",
-                    "subcategory": "Donuts"
+                    "item_type": "food",
+                    "size_basis": "2-count",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__bagels",
+                    "item_key": "bagels",
                     "name": "Bagels",
                     "price_usd": 2.49,
+                    "subcategory": "Bakery",
                     "serving": "each",
-                    "subcategory": "Donuts"
+                    "item_type": "food",
+                    "size_basis": "each",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__bagels-with-cream-cheese-spread",
+                    "item_key": "bagels-with-cream-cheese-spread",
                     "name": "Bagels with Cream Cheese Spread",
                     "price_usd": 3.99,
-                    "subcategory": "Donuts"
+                    "subcategory": "Bakery",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__butter-croissant",
+                    "item_key": "butter-croissant",
                     "name": "Butter Croissant",
                     "price_usd": 2.99,
-                    "subcategory": "Donuts"
+                    "subcategory": "Bakery",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "donuts-bagels-bakery__english-muffin",
+                    "item_key": "english-muffin",
                     "name": "English Muffin",
                     "price_usd": 2.49,
-                    "subcategory": "Donuts"
+                    "subcategory": "Bakery",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 }
             ]
         },
         {
             "category": "Savory Bites",
+            "item_count": 11,
             "items": [
                 {
+                    "id": "savory-bites__bacon-topped-avocado-toast",
+                    "item_key": "bacon-topped-avocado-toast",
                     "name": "Bacon-Topped Avocado Toast",
                     "price_usd": 4.99,
-                    "subcategory": "Toasts"
+                    "subcategory": "Toasts",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "savory-bites__avocado-toast",
+                    "item_key": "avocado-toast",
                     "name": "Avocado Toast",
                     "price_usd": 3.99,
-                    "subcategory": "Toasts"
+                    "subcategory": "Toasts",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "savory-bites__bacon-cheddar-omelet-bites",
+                    "item_key": "bacon-cheddar-omelet-bites",
                     "name": "Bacon & Cheddar Omelet Bites",
                     "price_usd": 4.99,
+                    "subcategory": "Bites",
                     "serving": "2-count",
-                    "subcategory": "Bites"
+                    "item_type": "food",
+                    "size_basis": "2-count",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "savory-bites__plain-stuffed-bagel-minis",
+                    "item_key": "plain-stuffed-bagel-minis",
                     "name": "Plain Stuffed Bagel Minis",
                     "price_usd": 3.49,
+                    "subcategory": "Bites",
                     "serving": "2-count",
-                    "subcategory": "Bites"
+                    "item_type": "food",
+                    "size_basis": "2-count",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "savory-bites__everything-stuffed-bagel-minis",
+                    "item_key": "everything-stuffed-bagel-minis",
                     "name": "Everything Stuffed Bagel Minis",
                     "price_usd": 3.49,
+                    "subcategory": "Bites",
                     "serving": "2-count",
-                    "subcategory": "Bites"
+                    "item_type": "food",
+                    "size_basis": "2-count",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "savory-bites__ham-swiss-croissant-stuffer",
+                    "item_key": "ham-swiss-croissant-stuffer",
                     "name": "Ham & Swiss Croissant Stuffer",
                     "price_usd": 5.99,
-                    "subcategory": "Snacks & Sides"
+                    "subcategory": "Snacks & Sides",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "savory-bites__maple-sugar-snackin-bacon",
+                    "item_key": "maple-sugar-snackin-bacon",
                     "name": "Maple Sugar Snackin' Bacon",
                     "price_usd": 3.99,
-                    "subcategory": "Snacks & Sides"
+                    "subcategory": "Snacks & Sides",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
-                    "name": "Plain Stuffed Bagel Minis",
-                    "price_usd": 3.49,
-                    "serving": "2-count",
-                    "subcategory": "Snacks & Sides"
-                },
-                {
-                    "name": "Everything Stuffed Bagel Minis",
-                    "price_usd": 3.49,
-                    "serving": "2-count",
-                    "subcategory": "Snacks & Sides"
-                },
-                {
+                    "id": "savory-bites__hash-browns",
+                    "item_key": "hash-browns",
                     "name": "Hash Browns",
                     "price_usd": 1.99,
-                    "subcategory": "Snacks & Sides"
+                    "subcategory": "Snacks & Sides",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "savory-bites__loaded-hash-browns",
+                    "item_key": "loaded-hash-browns",
                     "name": "Loaded Hash Browns",
                     "price_usd": 4.49,
-                    "subcategory": "Snacks & Sides"
+                    "subcategory": "Snacks & Sides",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
-                    "name": "MUNCHKINSÂ® Donut Hole Treats",
+                    "id": "savory-bites__munchkins-donut-hole-treats",
+                    "item_key": "munchkins-donut-hole-treats",
+                    "name": "MUNCHKINS® Donut Hole Treats",
                     "price_usd": 4.99,
+                    "subcategory": "Snacks & Sides",
                     "serving": "10-count",
-                    "subcategory": "Snacks & Sides"
+                    "item_type": "food",
+                    "size_basis": "10-count",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "savory-bites__spreads",
+                    "item_key": "spreads",
                     "name": "Spreads",
                     "price_usd": 1.0,
-                    "subcategory": "Snacks & Sides"
+                    "subcategory": "Snacks & Sides",
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 }
             ]
         },
         {
             "category": "Brew At Home",
+            "item_count": 2,
             "items": [
                 {
+                    "id": "brew-at-home__packaged-coffee",
+                    "item_key": "packaged-coffee",
                     "name": "Packaged Coffee",
-                    "price_usd": 10.99
+                    "price_usd": 10.99,
+                    "item_type": "retail",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": false
                 },
                 {
-                    "name": "K-CupÂ® Pods",
-                    "price_usd": 12.99
+                    "id": "brew-at-home__k-cup-pods",
+                    "item_key": "k-cup-pods",
+                    "name": "K-Cup® Pods",
+                    "price_usd": 12.99,
+                    "item_type": "retail",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": false
                 }
             ]
         },
         {
             "category": "Bottled Drinks",
+            "item_count": 15,
             "items": [
                 {
+                    "id": "bottled-drinks__bottled-water",
+                    "item_key": "bottled-water",
                     "name": "Bottled Water",
-                    "price_usd": 2.49
+                    "price_usd": 2.49,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "TropicanaÂ® Orange Juice",
-                    "price_usd": 3.29
+                    "id": "bottled-drinks__tropicana-orange-juice",
+                    "item_key": "tropicana-orange-juice",
+                    "name": "Tropicana® Orange Juice",
+                    "price_usd": 3.29,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "TropicanaÂ® Apple Juice",
-                    "price_usd": 3.29
+                    "id": "bottled-drinks__tropicana-apple-juice",
+                    "item_key": "tropicana-apple-juice",
+                    "name": "Tropicana® Apple Juice",
+                    "price_usd": 3.29,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "Ocean SprayÂ® Cranberry Juice",
-                    "price_usd": 3.29
+                    "id": "bottled-drinks__ocean-spray-cranberry-juice",
+                    "item_key": "ocean-spray-cranberry-juice",
+                    "name": "Ocean Spray® Cranberry Juice",
+                    "price_usd": 3.29,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "PepsiÂ®",
-                    "price_usd": 2.99
+                    "id": "bottled-drinks__pepsi",
+                    "item_key": "pepsi",
+                    "name": "Pepsi®",
+                    "price_usd": 2.99,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Diet PepsiÂ®",
-                    "price_usd": 2.99
+                    "id": "bottled-drinks__diet-pepsi",
+                    "item_key": "diet-pepsi",
+                    "name": "Diet Pepsi®",
+                    "price_usd": 2.99,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Pepsi Â® Zero Sugar",
-                    "price_usd": 2.99
+                    "id": "bottled-drinks__pepsi-zero-sugar",
+                    "item_key": "pepsi-zero-sugar",
+                    "name": "Pepsi® Zero Sugar",
+                    "price_usd": 2.99,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "StarryÂ®",
-                    "price_usd": 2.99
+                    "id": "bottled-drinks__starry",
+                    "item_key": "starry",
+                    "name": "Starry®",
+                    "price_usd": 2.99,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "Mountain Dew Â®",
-                    "price_usd": 2.99
+                    "id": "bottled-drinks__mountain-dew",
+                    "item_key": "mountain-dew",
+                    "name": "Mountain Dew®",
+                    "price_usd": 2.99,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Sparkling Orange CELSIUSÂ®",
-                    "price_usd": 3.49
+                    "id": "bottled-drinks__sparkling-orange-celsius",
+                    "item_key": "sparkling-orange-celsius",
+                    "name": "Sparkling Orange CELSIUS®",
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "DoleÂ® Lemonade",
-                    "price_usd": 2.99
+                    "id": "bottled-drinks__dole-lemonade",
+                    "item_key": "dole-lemonade",
+                    "name": "Dole® Lemonade",
+                    "price_usd": 2.99,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "GatoradeÂ® - Cool Blue",
-                    "price_usd": 2.99
+                    "id": "bottled-drinks__gatorade-cool-blue",
+                    "item_key": "gatorade-cool-blue",
+                    "name": "Gatorade® - Cool Blue",
+                    "price_usd": 2.99,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "GatoradeÂ® - Lemon Lime",
-                    "price_usd": 2.99
+                    "id": "bottled-drinks__gatorade-lemon-lime",
+                    "item_key": "gatorade-lemon-lime",
+                    "name": "Gatorade® - Lemon Lime",
+                    "price_usd": 2.99,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
-                    "name": "RockstarÂ®",
-                    "price_usd": 3.99
+                    "id": "bottled-drinks__rockstar",
+                    "item_key": "rockstar",
+                    "name": "Rockstar®",
+                    "price_usd": 3.99,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "NakedÂ®  Smoothie",
-                    "price_usd": 4.49
+                    "id": "bottled-drinks__naked-smoothie",
+                    "item_key": "naked-smoothie",
+                    "name": "Naked® Smoothie",
+                    "price_usd": 4.49,
+                    "item_type": "drink",
+                    "temperature": "bottled",
+                    "size_basis": "bottle",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 }
             ]
         },
         {
             "category": "Avengers Unite",
+            "item_count": 11,
             "items": [
                 {
+                    "id": "avengers-unite__doom-s-orders-energy",
+                    "item_key": "doom-s-orders-energy",
                     "name": "Doom's Orders Energy",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "avengers-unite__doom-cloud-latte",
+                    "item_key": "doom-cloud-latte",
                     "name": "Doom Cloud Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "avengers-unite__wakandan-daydream-refresher",
+                    "item_key": "wakandan-daydream-refresher",
                     "name": "Wakandan Daydream Refresher",
-                    "price_usd": 4.79
+                    "price_usd": 4.79,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "avengers-unite__optic-blast-lemonade",
+                    "item_key": "optic-blast-lemonade",
                     "name": "Optic Blast Lemonade",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "avengers-unite__clobbered-cloud-latte",
+                    "item_key": "clobbered-cloud-latte",
                     "name": "Clobbered Cloud Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "avengers-unite__iced-captain-ccino",
+                    "item_key": "iced-captain-ccino",
                     "name": "Iced Captain'ccino",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "avengers-unite__doomsday-donut",
+                    "item_key": "doomsday-donut",
                     "name": "Doomsday Donut",
-                    "price_usd": 2.49
+                    "price_usd": 2.49,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
-                    "name": "Doomsday MUNCHKINSÂ® Donut Hole Treats",
-                    "price_usd": 4.99
+                    "id": "avengers-unite__doomsday-munchkins-donut-hole-treats",
+                    "item_key": "doomsday-munchkins-donut-hole-treats",
+                    "name": "Doomsday MUNCHKINS® Donut Hole Treats",
+                    "price_usd": 4.99,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "avengers-unite__avenging-donut",
+                    "item_key": "avenging-donut",
                     "name": "Avenging Donut",
-                    "price_usd": 2.49
+                    "price_usd": 2.49,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
-                    "name": "Avenging MUNCHKINSÂ® Donut Hole Treats",
-                    "price_usd": 4.99
+                    "id": "avengers-unite__avenging-munchkins-donut-hole-treats",
+                    "item_key": "avenging-munchkins-donut-hole-treats",
+                    "name": "Avenging MUNCHKINS® Donut Hole Treats",
+                    "price_usd": 4.99,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
-                    "name": "25 Ct. Doom MUNCHKINSÂ® Donut Hole Treats Tin",
-                    "price_usd": 11.99
+                    "id": "avengers-unite__25-ct-doom-munchkins-donut-hole-treats-tin",
+                    "item_key": "25-ct-doom-munchkins-donut-hole-treats-tin",
+                    "name": "25 Ct. Doom MUNCHKINS® Donut Hole Treats Tin",
+                    "price_usd": 11.99,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": false,
+                    "meal_period": "all_day"
                 }
             ]
         },
         {
             "category": "Holiday Faves",
+            "item_count": 12,
             "items": [
                 {
+                    "id": "holiday-faves__cookie-butter-cloud-latte",
+                    "item_key": "cookie-butter-cloud-latte",
                     "name": "Cookie Butter Cloud Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "holiday-faves__toasted-white-chocolate-iced-signature-latte",
+                    "item_key": "toasted-white-chocolate-iced-signature-latte",
                     "name": "Toasted White Chocolate Iced Signature Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "holiday-faves__toasted-white-chocolate-signature-latte",
+                    "item_key": "toasted-white-chocolate-signature-latte",
                     "name": "Toasted White Chocolate Signature Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "holiday-faves__cookie-butter-matcha",
+                    "item_key": "cookie-butter-matcha",
                     "name": "Cookie Butter Matcha",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "hot_or_iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Cookie Butter Cloud Dunkalatteâ„¢",
-                    "price_usd": 5.49
+                    "id": "holiday-faves__cookie-butter-cloud-dunkalatte",
+                    "item_key": "cookie-butter-cloud-dunkalatte",
+                    "name": "Cookie Butter Cloud Dunkalatte™",
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "hot_or_iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "holiday-faves__cookie-butter-hot-chocolate",
+                    "item_key": "cookie-butter-hot-chocolate",
                     "name": "Cookie Butter Hot Chocolate",
-                    "price_usd": 3.99
+                    "price_usd": 3.99,
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "holiday-faves__raspberry-white-chocolate-matcha",
+                    "item_key": "raspberry-white-chocolate-matcha",
                     "name": "Raspberry White Chocolate Matcha",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "hot_or_iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "holiday-faves__almond-white-chocolate-shakin-espresso",
+                    "item_key": "almond-white-chocolate-shakin-espresso",
                     "name": "Almond White Chocolate Shakin' Espresso",
-                    "price_usd": 5.19
+                    "price_usd": 5.19,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "holiday-faves__iced-cookie-butter-oat-chai-latte",
+                    "item_key": "iced-cookie-butter-oat-chai-latte",
                     "name": "Iced Cookie Butter Oat Chai Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "holiday-faves__toasted-white-chocolate-cloud-latte",
+                    "item_key": "toasted-white-chocolate-cloud-latte",
                     "name": "Toasted White Chocolate Cloud Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "holiday-faves__cookie-butter-cold-brew",
+                    "item_key": "cookie-butter-cold-brew",
                     "name": "Cookie Butter Cold Brew",
-                    "price_usd": 5.29
+                    "price_usd": 5.29,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "holiday-faves__spiced-cookie-iced-coffee",
+                    "item_key": "spiced-cookie-iced-coffee",
                     "name": "Spiced Cookie Iced Coffee",
-                    "price_usd": 3.99
+                    "price_usd": 3.99,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 }
             ]
         },
         {
             "category": "Latest Drops",
+            "item_count": 12,
             "items": [
                 {
+                    "id": "latest-drops__green-apple-dunkin-zero",
+                    "item_key": "green-apple-dunkin-zero",
                     "name": "Green Apple Dunkin' Zero",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "latest-drops__midnight-apple-dunkin-zero",
+                    "item_key": "midnight-apple-dunkin-zero",
                     "name": "Midnight Apple Dunkin' Zero",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "latest-drops__berry-clementine-refresher",
+                    "item_key": "berry-clementine-refresher",
                     "name": "Berry Clementine Refresher",
-                    "price_usd": 4.79
+                    "price_usd": 4.79,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": false,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "latest-drops__berry-daydream-refresher",
+                    "item_key": "berry-daydream-refresher",
                     "name": "Berry Daydream Refresher",
-                    "price_usd": 4.79
+                    "price_usd": 4.79,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "latest-drops__pumpkin-spice-iced-signature-latte",
+                    "item_key": "pumpkin-spice-iced-signature-latte",
                     "name": "Pumpkin Spice Iced Signature Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Pumpkin Cloud Dunkalatteâ„¢",
-                    "price_usd": 5.49
+                    "id": "latest-drops__pumpkin-cloud-dunkalatte",
+                    "item_key": "pumpkin-cloud-dunkalatte",
+                    "name": "Pumpkin Cloud Dunkalatte™",
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "hot_or_iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "latest-drops__pumpkin-patch-cloud-latte",
+                    "item_key": "pumpkin-patch-cloud-latte",
                     "name": "Pumpkin Patch Cloud Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Marshmallow Cloud Dunkalatteâ„¢",
-                    "price_usd": 5.49
+                    "id": "latest-drops__marshmallow-cloud-dunkalatte",
+                    "item_key": "marshmallow-cloud-dunkalatte",
+                    "name": "Marshmallow Cloud Dunkalatte™",
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "hot_or_iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "latest-drops__candy-kiss-dunkin-zero",
+                    "item_key": "candy-kiss-dunkin-zero",
                     "name": "Candy Kiss Dunkin' Zero",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "latest-drops__maple-sugar-bacon-breakfast-sandwich",
+                    "item_key": "maple-sugar-bacon-breakfast-sandwich",
                     "name": "Maple Sugar Bacon Breakfast Sandwich",
-                    "price_usd": 5.99
+                    "price_usd": 5.99,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
-                    "name": "Wake-Up WrapÂ® - Maple Sugar Bacon",
-                    "price_usd": 3.49
+                    "id": "latest-drops__wake-up-wrap-maple-sugar-bacon",
+                    "item_key": "wake-up-wrap-maple-sugar-bacon",
+                    "name": "Wake-Up Wrap® - Maple Sugar Bacon",
+                    "price_usd": 3.49,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 },
                 {
+                    "id": "latest-drops__maple-sugar-snackin-bacon",
+                    "item_key": "maple-sugar-snackin-bacon",
                     "name": "Maple Sugar Snackin' Bacon",
-                    "price_usd": 3.99
+                    "price_usd": 3.99,
+                    "item_type": "food",
+                    "size_basis": "one serving",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "meal_period": "all_day"
                 }
             ]
         },
         {
             "category": "Refreshing Sips",
+            "item_count": 10,
             "items": [
                 {
+                    "id": "refreshing-sips__green-apple-dunkin-zero",
+                    "item_key": "green-apple-dunkin-zero",
                     "name": "Green Apple Dunkin' Zero",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "refreshing-sips__midnight-apple-dunkin-zero",
+                    "item_key": "midnight-apple-dunkin-zero",
                     "name": "Midnight Apple Dunkin' Zero",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "refreshing-sips__berry-daydream-refresher",
+                    "item_key": "berry-daydream-refresher",
                     "name": "Berry Daydream Refresher",
-                    "price_usd": 4.79
+                    "price_usd": 4.79,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "refreshing-sips__light-dunkin-refreshers",
+                    "item_key": "light-dunkin-refreshers",
                     "name": "Light Dunkin' Refreshers",
-                    "price_usd": 4.49
+                    "price_usd": 4.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "refreshing-sips__mango-pineapple-lemonade-refresher",
+                    "item_key": "mango-pineapple-lemonade-refresher",
                     "name": "Mango Pineapple Lemonade Refresher",
-                    "price_usd": 4.79
+                    "price_usd": 4.79,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "refreshing-sips__strawberry-daydream-refresher",
+                    "item_key": "strawberry-daydream-refresher",
                     "name": "Strawberry Daydream Refresher",
-                    "price_usd": 4.79
+                    "price_usd": 4.79,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "refreshing-sips__orchard-twist-dunkin-zero",
+                    "item_key": "orchard-twist-dunkin-zero",
                     "name": "Orchard Twist Dunkin' Zero",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "refreshing-sips__blushpop-dunkin-zero",
+                    "item_key": "blushpop-dunkin-zero",
                     "name": "Blushpop Dunkin' Zero",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "refreshing-sips__tropical-mango-dunkin-zero",
+                    "item_key": "tropical-mango-dunkin-zero",
                     "name": "Tropical Mango Dunkin' Zero",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": false
                 },
                 {
+                    "id": "refreshing-sips__mix-your-own-refresher",
+                    "item_key": "mix-your-own-refresher",
                     "name": "Mix Your Own Refresher",
-                    "price_usd": 4.79
+                    "price_usd": 4.79,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 }
             ]
         },
         {
             "category": "Crafted Coffees",
+            "item_count": 13,
             "items": [
                 {
+                    "id": "crafted-coffees__make-your-own-cloud-latte",
+                    "item_key": "make-your-own-cloud-latte",
                     "name": "Make Your Own Cloud Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__pumpkin-spice-iced-signature-latte",
+                    "item_key": "pumpkin-spice-iced-signature-latte",
                     "name": "Pumpkin Spice Iced Signature Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__nutty-pumpkin-iced-coffee",
+                    "item_key": "nutty-pumpkin-iced-coffee",
                     "name": "Nutty Pumpkin Iced Coffee",
-                    "price_usd": 3.99
+                    "price_usd": 3.99,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Marshmallow Cloud Dunkalatteâ„¢",
-                    "price_usd": 5.49
+                    "id": "crafted-coffees__marshmallow-cloud-dunkalatte",
+                    "item_key": "marshmallow-cloud-dunkalatte",
+                    "name": "Marshmallow Cloud Dunkalatte™",
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "hot_or_iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__pumpkin-spice-signature-latte",
+                    "item_key": "pumpkin-spice-signature-latte",
                     "name": "Pumpkin Spice Signature Latte",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__nutty-pumpkin-coffee",
+                    "item_key": "nutty-pumpkin-coffee",
                     "name": "Nutty Pumpkin Coffee",
-                    "price_usd": 3.49
+                    "price_usd": 3.49,
+                    "item_type": "drink",
+                    "temperature": "hot",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": true,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__coffee-chiller",
+                    "item_key": "coffee-chiller",
                     "name": "Coffee Chiller",
-                    "price_usd": 5.49
+                    "price_usd": 5.49,
+                    "item_type": "drink",
+                    "temperature": "frozen",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
-                    "name": "Dunkalatteâ„¢",
-                    "price_usd": 5.29
+                    "id": "crafted-coffees__dunkalatte",
+                    "item_key": "dunkalatte",
+                    "name": "Dunkalatte™",
+                    "price_usd": 5.29,
+                    "item_type": "drink",
+                    "temperature": "hot_or_iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__brown-sugar-shakin-espresso",
+                    "item_key": "brown-sugar-shakin-espresso",
                     "name": "Brown Sugar Shakin' Espresso",
-                    "price_usd": 4.99
+                    "price_usd": 4.99,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__vanilla-creme-cold-brew",
+                    "item_key": "vanilla-creme-cold-brew",
                     "name": "Vanilla Creme Cold Brew",
-                    "price_usd": 5.29
+                    "price_usd": 5.29,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__cold-brew",
+                    "item_key": "cold-brew",
                     "name": "Cold Brew",
-                    "price_usd": 4.29
+                    "price_usd": 4.29,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__cold-brew-with-cold-foam",
+                    "item_key": "cold-brew-with-cold-foam",
                     "name": "Cold Brew with Cold Foam",
-                    "price_usd": 5.29
+                    "price_usd": 5.29,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 },
                 {
+                    "id": "crafted-coffees__the-caramel-cold-foam",
+                    "item_key": "the-caramel-cold-foam",
                     "name": "The Caramel Cold Foam",
-                    "price_usd": 5.29
+                    "price_usd": 5.29,
+                    "item_type": "drink",
+                    "temperature": "iced",
+                    "size_basis": "medium",
+                    "limited_time_or_seasonal": false,
+                    "grab_and_go_friendly": true,
+                    "likely_contains_caffeine": true
                 }
             ]
         }

@@ -59,7 +59,7 @@
         },
         {
             "id": "drinks-coffee-cafe-au-lait",
-            "name": "Cafe Au Lait",
+            "name": "Café au Lait",
             "category": "Drinks",
             "subcategory": "Coffee",
             "price": 4.0,
@@ -489,7 +489,7 @@
         },
         {
             "id": "drinks-booze-sauvingnon-blanc",
-            "name": "Sauvingnon Blanc",
+            "name": "Sauvignon Blanc",
             "category": "Drinks",
             "subcategory": "Booze",
             "price": 9.0,
@@ -499,7 +499,7 @@
         },
         {
             "id": "drinks-booze-pino-grigio",
-            "name": "Pino Grigio",
+            "name": "Pinot Grigio",
             "category": "Drinks",
             "subcategory": "Booze",
             "price": 7.0,
@@ -1063,7 +1063,7 @@
         },
         {
             "id": "pastries-gluten-free-gluten-free-chocolate-muffin",
-            "name": "Gluten Free Chocolate Muffin",
+            "name": "Gluten-Free Chocolate Muffin",
             "category": "Pastries",
             "subcategory": "Gluten Free",
             "price": 4.0,
@@ -1075,7 +1075,7 @@
         },
         {
             "id": "pastries-gluten-free-gluten-free-strawberry-muffin",
-            "name": "Gluten Free Strawberry Muffin",
+            "name": "Gluten-Free Strawberry Muffin",
             "category": "Pastries",
             "subcategory": "Gluten Free",
             "price": 4.0,
@@ -1087,7 +1087,7 @@
         },
         {
             "id": "pastries-gluten-free-gluten-free-chocolate-cookie",
-            "name": "Gluten Free Chocolate Cookie",
+            "name": "Gluten-Free Chocolate Cookie",
             "category": "Pastries",
             "subcategory": "Gluten Free",
             "price": 3.0,
@@ -1204,6 +1204,50 @@
         "Item names and prices are transcribed from the supplied source menu.",
         "A price ending in '+' is stored as the listed starting price with price_is_from set to true.",
         "Featured items reference the canonical item records in the items array.",
-        "Dietary tags are included only when explicitly indicated by the menu wording or section."
-    ]
+        "Dietary tags are included only when explicitly indicated by the menu wording or section.",
+        "Business information describes the DeLand, Florida location and is separate from menu item pricing.",
+        "Drive-thru availability is unconfirmed; null means the feature could not be verified.",
+        "Venue atmosphere and study suitability are descriptive guidance based on public listings and customer feedback."
+    ],
+    "business_info": {
+        "name": "Trilogy Kitchen",
+        "business_type": "Breakfast and lunch cafe with coffee, tea, smoothies, and pastries",
+        "location": {
+            "street_address": "844 E. New York Ave., Suite A",
+            "city": "DeLand",
+            "state": "Florida",
+            "postal_code": "32724",
+            "country": "United States",
+            "formatted_address": "844 E. New York Ave., Suite A, DeLand, FL 32724, USA"
+        },
+        "phone": "(386) 469-9489",
+        "description": "A cozy cafe serving fresh breakfast and lunch options, specialty coffee, tea, smoothies, and pastries. Customers order at the counter and food is brought to the table. The menu includes both lighter options and more filling meals.",
+        "atmosphere": {
+            "summary": "Cozy, welcoming cafe with a friendly atmosphere.",
+            "good_for_studying": true,
+            "study_description": "Potentially a good place to study or work for a while. The cafe has been described as cozy and welcoming, and listings report free Wi-Fi and outdoor seating. It may get busy, especially on weekends, so it may be less quiet during peak breakfast hours.",
+            "wifi": "Free Wi-Fi reported by a business directory; confirm availability with the cafe.",
+            "seating": [
+                "Indoor seating",
+                "Outdoor seating reported"
+            ]
+        },
+        "quick_visit": {
+            "good_for_quick_grab_and_go": true,
+            "description": "Suitable for a quick coffee, smoothie, pastry, or lighter breakfast pickup. Counter ordering and takeout are available. Made-to-order meals may take longer during busy periods.",
+            "takeout": true,
+            "online_ordering": true
+        },
+        "drive_thru": {
+            "available": null,
+            "description": "A drive-thru is not confirmed in the available business listings. Check directly with the cafe before relying on drive-thru service."
+        },
+        "service_options": [
+            "Dine-in",
+            "Takeout",
+            "Online ordering",
+            "Delivery availability may vary by platform"
+        ],
+        "business_details_note": "Atmosphere, study suitability, Wi-Fi, and service details are based on publicly available business listings and customer comments; conditions can change."
+    }
 }
