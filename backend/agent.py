@@ -4,9 +4,10 @@ import os
 import re
 
 from intent_handler import extract_preferences, identify_intent
+from response_generator import generate_response
 
 
-# Load all restaurant JSON files
+# Load all restaurant JSON files from the JSON folder
 def load_coffee_data():
 
     json_folder = os.path.join(
@@ -33,43 +34,75 @@ def load_coffee_data():
                 shop_name = os.path.splitext(filename)[0].lower()
                 coffee_shops[shop_name] = data
 
+                print("Loaded:", filename)
+
             except (json.JSONDecodeError, OSError) as error:
                 print(f"Error loading {filename}: {error}")
 
     return coffee_shops
 
 
-# Get a restaurant's location from its JSON data
+# Get the restaurant's location information
 def get_restaurant_location(shop_data):
 
     if not isinstance(shop_data, dict):
         return ""
 
-    # Original JSON location format
+    locations = []
+
+    # Standard location format
     location = shop_data.get("location", {})
 
     if isinstance(location, dict):
 
-        city = location.get("city", "")
-        state = location.get("state", "")
+        locations.append(
+            str(location.get("city", "")) + " " +
+            str(location.get("state", ""))
+        )
 
-        if city or state:
-            return f"{city} {state}".lower()
+    # Top-level locations format
+    top_locations = shop_data.get("locations", [])
 
-    # Expanded Starbucks JSON location format
-    locations = shop_data.get("locations", {})
+    if isinstance(top_locations, dict):
 
-    if isinstance(locations, dict):
+        locations.append(
+            str(top_locations.get("city", "")) + " " +
+            str(top_locations.get("state", ""))
+        )
 
-        city = locations.get("city", "")
-        state = locations.get("state", "")
+    elif isinstance(top_locations, list):
 
-        return f"{city} {state}".lower()
+        for place in top_locations:
 
-    return str(location).lower()
+            if isinstance(place, dict):
+
+                locations.append(
+                    str(place.get("name", "")) + " " +
+                    str(place.get("address", ""))
+                )
+
+    # Boston Coffee nested locations format
+    restaurant_info = shop_data.get("restaurant_info", {})
+
+    if isinstance(restaurant_info, dict):
+
+        boston_locations = restaurant_info.get("locations", [])
+
+        if isinstance(boston_locations, list):
+
+            for place in boston_locations:
+
+                if isinstance(place, dict):
+
+                    locations.append(
+                        str(place.get("name", "")) + " " +
+                        str(place.get("address", ""))
+                    )
+
+    return " ".join(locations).lower()
 
 
-# Filter restaurants by requested location
+# Filter restaurants by location
 def filter_restaurants_by_location(shops, location):
 
     if not location:
@@ -88,7 +121,7 @@ def filter_restaurants_by_location(shops, location):
     return matching_shops
 
 
-# Extract menu items from restaurant data
+# Extract menu items from different JSON structures
 def get_menu_items(data, category_path=None, inherited_prices=None):
 
     if category_path is None:
@@ -102,6 +135,7 @@ def get_menu_items(data, category_path=None, inherited_prices=None):
     if isinstance(data, list):
 
         for entry in data:
+
             items.extend(
                 get_menu_items(
                     entry,
@@ -114,12 +148,13 @@ def get_menu_items(data, category_path=None, inherited_prices=None):
 
         name = data.get("name")
 
-        # Support multiple menu price formats
+        # Price fields used by the restaurant JSON files
         price_keys = [
             "price",
             "price_usd",
-            "prices",
             "price_each",
+            "prices",
+            "price_range_usd",
             "available_as",
             "flavors"
         ]
@@ -146,28 +181,22 @@ def get_menu_items(data, category_path=None, inherited_prices=None):
             if name:
                 new_path.append(name)
 
-            # Search nested menu sections and categories
-            for key, value in data.items():
+            # Search all supported menu containers
+            menu_keys = [
+                "categories",
+                "subcategories",
+                "items",
+                "sections",
+                "menu"
+            ]
 
-                if key in [
-                    "items",
-                    "subcategories",
-                    "sections"
-                ]:
+            for key in menu_keys:
 
-                    items.extend(
-                        get_menu_items(
-                            value,
-                            new_path,
-                            inherited_prices
-                        )
-                    )
-
-                elif key == "menu":
+                if key in data:
 
                     items.extend(
                         get_menu_items(
-                            value,
+                            data[key],
                             new_path,
                             inherited_prices
                         )
@@ -181,7 +210,7 @@ def get_item_prices(item):
 
     prices = []
 
-    # Standard price fields, including Starbucks price_usd
+    # Standard price fields
     for key in ["price", "price_usd", "price_each"]:
 
         value = item.get(key)
@@ -189,7 +218,7 @@ def get_item_prices(item):
         if isinstance(value, (int, float)):
             prices.append(float(value))
 
-    # Handle multiple price formats
+    # Handle different price formats
     price_data = item.get("prices", [])
 
     if isinstance(price_data, (int, float)):
@@ -201,6 +230,13 @@ def get_item_prices(item):
 
             if isinstance(value, (int, float)):
                 prices.append(float(value))
+
+            elif isinstance(value, dict):
+
+                for nested_value in value.values():
+
+                    if isinstance(nested_value, (int, float)):
+                        prices.append(float(nested_value))
 
     elif isinstance(price_data, list):
 
@@ -216,16 +252,21 @@ def get_item_prices(item):
                     if isinstance(value, (int, float)):
                         prices.append(float(value))
 
-    # Handle inherited prices
-    for value in item.get("_prices", []):
+    # Handle price ranges
+    price_range = item.get("price_range_usd", {})
 
-        if isinstance(value, (int, float)):
-            prices.append(float(value))
+    if isinstance(price_range, dict):
 
-    return list(set(prices))
+        for value in price_range.values():
+
+            if isinstance(value, (int, float)):
+                prices.append(float(value))
+
+    # Remove duplicate prices
+    return sorted(set(prices))
 
 
-# Get the restaurant's display name
+# Get restaurant display name
 def get_restaurant_name(shop_name, shop_data):
 
     if isinstance(shop_data, dict):
@@ -255,6 +296,11 @@ def search_and_recommend(user_query, location=None):
     if not shops:
         return "Sorry, I couldn't find any restaurant databases."
 
+    # Extract a location if one was not provided
+    if not location:
+        from intent_handler import extract_location
+        location = extract_location(user_query)
+
     # Filter restaurants by requested location
     if location:
 
@@ -264,6 +310,7 @@ def search_and_recommend(user_query, location=None):
         )
 
         if not shops:
+
             return (
                 f"Sorry, I couldn't find any restaurants "
                 f"in {location}. Please try another location."
@@ -274,7 +321,7 @@ def search_and_recommend(user_query, location=None):
 
     query = user_query.lower()
 
-    # Remove punctuation and common question words
+    # Remove punctuation
     query_words = re.findall(r"[a-z0-9]+", query)
 
     ignored_words = {
@@ -282,7 +329,10 @@ def search_and_recommend(user_query, location=None):
         "order", "some", "a", "an", "the", "please",
         "recommend", "recommendation", "would", "like",
         "want", "me", "is", "there", "any", "for",
-        "near", "in", "at", "do", "you", "have"
+        "near", "in", "at", "do", "you", "have",
+        "coffee", "shop", "shops", "restaurant",
+        "restaurants", "under", "below", "less",
+        "than", "up", "to", "dollar"
     }
 
     search_words = [
@@ -317,19 +367,19 @@ def search_and_recommend(user_query, location=None):
 
             score = 0
 
-            # Match individual words
+            # Match individual search words
             for word in search_words:
 
                 if word in searchable_text:
                     score += 2
 
-            # Give extra points for matching the full phrase
+            # Give extra points for an exact menu item match
             item_name = str(item.get("name", "")).lower()
 
             if item_name and item_name in query:
                 score += 8
 
-            # Match the requested words against the item name
+            # Give extra points when all search words match the item name
             if search_words:
 
                 matched_name_words = sum(
@@ -357,17 +407,18 @@ def search_and_recommend(user_query, location=None):
 
             item["_score"] = score
 
-            # Only keep items that actually match the query
+            # Keep items that match the search
             if score > 0:
                 all_items.append(item)
 
-    # Sort recommendations by relevance
+    # Sort by relevance
     all_items.sort(
         key=lambda item: item["_score"],
         reverse=True
     )
 
     if not all_items:
+
         return (
             "I couldn't find a matching menu item"
             + (f" in {location}." if location else ".")
@@ -390,38 +441,40 @@ def search_and_recommend(user_query, location=None):
         if len(recommendations) == 4:
             break
 
-    # Format recommendations for Streamlit
-    response = "☕ **Coffee Recommendations**\n\n"
+    # Send recommendations to the response generator
+    return generate_response(
+        user_query,
+        recommendations
+    )
 
-    for item in recommendations:
 
-        response += f"### {item.get('name', 'Menu Item')}\n"
+# Test all four JSON files
+if __name__ == "__main__":
 
-        response += (
-            f"**Restaurant:** {item.get('_shop', 'Unknown')}\n\n"
+    shops = load_coffee_data()
+
+    print("\nJSON FILES LOADED:")
+
+    for shop_name in shops:
+        print("-", shop_name)
+
+    print("\nMENU ITEM COUNTS:")
+
+    for shop_name, shop_data in shops.items():
+
+        menu_items = get_menu_items(shop_data)
+
+        print(
+            shop_name,
+            ":",
+            len(menu_items),
+            "menu items"
         )
 
-        if item.get("_category"):
-            response += (
-                f"**Category:** {item['_category']}\n\n"
-            )
+    print("\nTEST RECOMMENDATION:")
 
-        if item.get("description"):
-            response += (
-                f"**Description:** {item['description']}\n\n"
-            )
-
-        prices = get_item_prices(item)
-
-        if prices:
-            response += (
-                "**Price:** "
-                + ", ".join(
-                    f"${price:.2f}" for price in sorted(prices)
-                )
-                + "\n\n"
-            )
-
-        response += "---\n\n"
-
-    return response
+    print(
+        search_and_recommend(
+            "Recommend a mocha"
+        )
+    )

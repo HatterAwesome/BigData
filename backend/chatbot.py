@@ -1,3 +1,4 @@
+
 from agent import search_and_recommend
 
 from intent_handler import (
@@ -26,7 +27,7 @@ def get_chatbot_response(user_query):
     # Step 4: Identify the requested location
     location = extract_location(user_query)
 
-    # Step 5: Search restaurant menus
+    # Step 5: Search coffee shops and generate recommendations
     recommendation = search_and_recommend(
         user_query,
         location=location

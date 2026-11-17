@@ -1,13 +1,171 @@
-#This file handles the actual recommendations process
-'''
-For example, a customer asks:
-"I want a quiet place with Wi-Fi where I can study."
 
-The recommendation engine should:
-1. Look at the available coffee shops.
-2. Identify shops with Wi-Fi.
-3. Find shops with seating.
-4. Check whether they offer a quiet environment.
-5. Rank the matching shops.
-6. Return the best matches
-'''
+import re
+
+
+# Keywords used to identify customer requests
+INTENTS = {
+    "study": [
+        "study", "laptop", "wifi", "wi-fi",
+        "quiet", "seating", "work"
+    ],
+
+    "drivethru": [
+        "drive thru", "drive-thru",
+        "quick", "fast", "on the go"
+    ],
+
+    "craft": [
+        "craft", "pour over", "roast",
+        "espresso", "artisanal", "beans"
+    ],
+
+    "budget": [
+        "cheap", "budget", "affordable",
+        "inexpensive", "deal"
+    ],
+
+    "price": [
+        "price", "cost", "how much"
+    ],
+
+    "menu": [
+        "menu", "drinks", "food",
+        "offers", "serves"
+    ],
+
+    "compare": [
+        "compare", "versus", "vs", "difference"
+    ],
+
+    "drink_recommendation": [
+        "recommend", "suggest", "latte",
+        "cappuccino", "cold brew",
+        "mocha", "iced coffee"
+    ]
+}
+
+
+# Common flavor preferences
+FLAVORS = [
+    "caramel",
+    "vanilla",
+    "mocha",
+    "hazelnut",
+    "chocolate",
+    "strawberry",
+    "pumpkin",
+    "cinnamon"
+]
+
+
+# Dietary preferences
+DIETARY = [
+    "dairy free",
+    "vegan",
+    "gluten free",
+    "sugar free"
+]
+
+
+# Identify the customer's main request
+def identify_intent(user_query):
+
+    query = user_query.lower()
+
+    for intent, keywords in INTENTS.items():
+
+        if any(word in query for word in keywords):
+            return intent
+
+    return "general"
+
+
+# Extract a location from the customer's message
+def extract_location(user_query):
+
+    query = user_query.strip()
+
+    match = re.search(
+        r"\b(?:in|near|around|within)\s+"
+        r"([A-Za-z][A-Za-z .'-]*?"
+        r"(?:,\s*[A-Za-z]{2})?)"
+        r"(?=\s*(?:\?|!|\.|$|"
+        r"\bfor\b|\bwith\b|\bthat\b|\bwhere\b))",
+        query,
+        re.IGNORECASE
+    )
+
+    if match:
+        return match.group(1).strip(" .,!?")
+
+    return None
+
+
+# Extract customer preferences
+def extract_preferences(user_query):
+
+    query = user_query.lower()
+
+    price_match = re.search(
+        r"(?:under|below|less than|up to)\s*\$?\s*(\d+(?:\.\d{1,2})?)",
+        query
+    )
+
+    return {
+
+        "temperature": (
+            "Iced" if any(
+                x in query for x in ["iced", "cold"]
+            )
+            else "Hot" if any(
+                x in query for x in ["hot", "warm"]
+            )
+            else None
+        ),
+
+        "flavors": [
+            flavor for flavor in FLAVORS
+            if flavor in query
+        ],
+
+        "dietary": [
+            diet for diet in DIETARY
+            if diet in query
+        ],
+
+        "max_price": (
+            float(price_match.group(1))
+            if price_match else None
+        ),
+
+        "seating": any(
+            x in query for x in [
+                "sit", "seating", "study", "work"
+            ]
+        ),
+
+        "wifi": any(
+            x in query for x in [
+                "wifi", "wi-fi", "internet"
+            ]
+        )
+    }
+
+
+# Find relevant keywords in the customer's message
+def identify_keywords(user_query):
+
+    query = user_query.lower()
+
+    keywords = [
+        word
+        for words in INTENTS.values()
+        for word in words
+    ]
+
+    keywords += FLAVORS + DIETARY
+
+    return list(dict.fromkeys(
+        word for word in keywords
+        if word in query
+    ))
